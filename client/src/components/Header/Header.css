@@ -1,0 +1,36 @@
+.nav-header {
+    width: 100vw;
+  background-color: #20232a;
+  position: fixed;
+  a {
+    color: white;
+
+    &:hover {
+      color: #61dafb !important;
+    }
+  }
+
+  .logo-course {
+    margin-left: 60px;
+    font-weight: 600;
+    font-size: 30px !important;
+    color: #61dafb;
+  }
+
+  .navigation-home, .navigation-about{
+    color:white !important;
+    width: 80px;
+    margin-left: 10px;
+  }
+
+  .navigation-about:active {
+    color: #61dafb;
+  }
+
+  .navbar-toggler {
+    background-color: whitesmoke;
+    position: absolute;
+    right: 17px;
+    top: 16px;
+  }
+}

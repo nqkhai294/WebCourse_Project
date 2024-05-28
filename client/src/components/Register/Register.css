@@ -1,0 +1,73 @@
+.Register-form {
+    display: flex;
+    height: 140vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('');
+    background-size: cover;
+}
+
+.register-container {
+    background-color:aqua;
+    width: 100%;
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    
+}
+
+.register-header {
+    text-align: right;
+}
+
+.register-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 2px white;
+    border-bottom: solid 1px black;
+}
+
+.register-welcome {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
+
+.register-form {
+    label {
+        padding-top: 15px;
+        width: 150px;
+        
+    }
+
+    input {
+        height: 35px;
+        border-radius: 7px;
+        border: 1px solid grey;
+        cursor: pointer;
+    }
+
+
+    input[type='text'], input[type='email'], input[type='date'] {
+        min-width: 200px;
+    }
+
+    input::placeholder {
+        opacity: 0.3;
+    }
+
+    .btn-submit {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 25px;
+        border-radius: 7px;
+        border: 1px solid grey;
+        background: black;
+        color: white;
+    }
+}
+
