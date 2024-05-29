@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-      <header>
-        Header
+      <header className = "text-textColor">
+        header
       </header>
     );
   };
