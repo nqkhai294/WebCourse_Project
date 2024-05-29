@@ -1,0 +1,119 @@
+.homepage {
+  padding-top: 70px;
+
+  .banner {
+    width: 100vw;
+    height: 500px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
+
+    .row {
+      margin: 0px 12vw;
+      padding: auto;
+      position: relative;
+      z-index: 0;
+      top: 80px;
+
+      .sub-title {
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 9px;
+      }
+
+      h1 {
+        color: white;
+        font-size: clamp(30px, 5.972vw, 76px);
+        line-height: 115%;
+        font-family: auto;
+        font-weight: 700;
+      }
+
+      .blog-description {
+        p {
+          font-size: clamp(18px, 1.528vw, 22px);
+          line-height: 130%;
+          color: #ffffff;
+          max-width: 710px;
+          margin-bottom: 29px;
+        }
+      }
+
+      .btn-register {
+        background-color: #8835f4;
+        color: #ffffff;
+        width: 15em;
+        height: 3.5em;
+        border: 2px solid black;
+        border-top-left-radius: 46px;
+        border-top-right-radius: 46px;
+        border-bottom-right-radius: 46px;
+        border-bottom-left-radius: 46px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .news {
+    background-color: #333;
+    .news-notice {
+      background-color: #000000;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 9px;
+      width: 100vw;
+      padding: 20px 12.5vw;
+      line-height: 30px;
+    }
+
+    .news-content {
+      background-color: #333;
+      color: #ffffff;
+    }
+  }
+
+  .about-us {
+    height: 500px;
+    background-color: black;
+    .row {
+        margin: 0px 12vw;
+      position: relative;
+      z-index: 0;
+      top: 80px;
+
+      .sub-title {
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 9px;
+      }
+
+      h1 {
+        color: white;
+        font-size: clamp(36px, 5.972vw, 56px);
+        line-height: 115%;
+        font-family: auto;
+        font-weight: 700;
+      }
+
+      .blog-description {
+        p {
+          font-size: clamp(18px, 1.528vw, 18px);
+          line-height: 130%;
+          color: #ffffff;
+          max-width: 710px;
+          margin-bottom: 29px;
+        }
+      }
+    }
+    
+    }
+  }
