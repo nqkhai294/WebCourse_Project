@@ -4,14 +4,62 @@ import { Link, NavLink } from "react-router-dom";
 const HomePage = (props) => {
   return (
     <div className="homepage">
-      <div className="banner"></div>
+      {/* Start Banner */}
+      <div className="banner">
+        <div class="row">
+          <div class="sub-title">/ AI Course</div>
 
-      <div className="content"></div>
+          <h1>Step into the future</h1>
+
+          <div className="blog-description">
+            <p>
+              Explore the world of AI with top experts and cutting-edge
+              technology.
+            </p>
+          </div>
+
+          <button className="btn-register">
+            <NavLink to="/register" className="nav-link">
+              Join the Course now
+            </NavLink>
+          </button>
+        </div>
+      </div>
+      {/* End Banner */}
+
+      {/* Start news */}
+      <div className="news">
+        <p className="news-notice">/News</p>
+
+        <div className="news-content">Write your content here!</div>
+      </div>
+      {/* End news */}
+
+      {/* Start about us */}
+      <div className="about-us">
+        <div class="row">
+          <div class="sub-title">/ About us</div>
+
+          <h1>We inspire the next generation of AI innovators</h1>
+
+          <div className="blog-description">
+            <p>
+            About us, we are dedicated to providing top-notch
+             AI courses designed to empower students with the knowledge and
+              skills to excel in the rapidly evolving field of artificial
+               intelligence. Our expert instructors, state-of-the-art facilities,
+                and comprehensive curriculum ensure that our students are well-prepared
+                 to lead in the world of AI.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* End about us */}
 
       <div className="register">
         <button>
           <NavLink to="/register" className="nav-link">
-            Register now!
+            Join now
           </NavLink>
         </button>
       </div>

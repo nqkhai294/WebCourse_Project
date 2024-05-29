@@ -1,6 +1,8 @@
+
 .nav-header {
+  z-index: 1;
     width: 100vw;
-  background-color: #20232a;
+  background-color: black;
   position: fixed;
   a {
     color: white;
@@ -12,25 +14,32 @@
 
   .logo-course {
     margin-left: 60px;
-    font-weight: 600;
+    margin-right: 30px;
+    font-weight: 800;
     font-size: 30px !important;
     color: #61dafb;
+    font-family: math;
   }
 
   .navigation-home, .navigation-about{
     color:white !important;
-    width: 80px;
-    margin-left: 10px;
+    
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: 500;
   }
 
-  .navigation-about:active {
-    color: #61dafb;
-  }
+  
 
   .navbar-toggler {
-    background-color: whitesmoke;
+    background-color: gray;
+    border: 2px solid white;
     position: absolute;
     right: 17px;
     top: 16px;
+  }
+
+  .navbar-toggler-icon {
+    
   }
 }
