@@ -3,18 +3,21 @@
     height: 140vh;
     justify-content: center;
     align-items: center;
-    background-image: url('');
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
     background-size: cover;
 }
 
 .register-container {
-    background-color:aqua;
+    background-color:#1b1a1a;
+    color: white;
     width: 100%;
     max-width: 650px;
     padding: 28px;
     margin: 0 28px;
     border-radius: 10px;
-    
+    box-shadow: 1px 1px 1px white;
 }
 
 .register-header {
@@ -26,15 +29,14 @@
     font-weight: 600;
     text-align: center;
     padding-bottom: 10px;
-    text-shadow: 2px 2px 2px white;
-    border-bottom: solid 1px black;
+    
+    border-bottom: solid 1px white;
 }
 
 .register-welcome {
     font-size: 18px;
     text-align: center;
     padding: 10px;
-    color: black;
 }
 
 .register-form {
@@ -60,14 +62,28 @@
         opacity: 0.3;
     }
 
-    .btn-submit {
-        width: 100%;
-        font-size: 20px;
-        margin-top: 25px;
-        border-radius: 7px;
-        border: 1px solid grey;
-        background: black;
-        color: white;
+    
+}
+
+.submit {
+    
+
+    .submit-btn {
+        background-color: #8835f4;
+        color: #ffffff;
+        width: 10em;
+        height: 3em;
+        border: 2px solid black;
+        border-top-left-radius: 46px;
+        border-top-right-radius: 46px;
+        border-bottom-right-radius: 46px;
+        border-bottom-left-radius: 46px;
+        
+        margin-top: 20px;
+        margin-left: 12em;
+        font-weight: 500;
     }
 }
+
+
 

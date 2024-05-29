@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from "react-router-dom";
 import './Header.css'
-import menuIcon from "../../assets/menu_toggler_icon.png"
 
 const Header = () => {
   return (
@@ -15,7 +14,9 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navigation">
           <Nav.Link href="/" className='navigation-home'>Home</Nav.Link>
-          <Nav.Link href="/" className='navigation-about'>About course</Nav.Link>
+          <Nav.Link href="/" className='navigation-news'>News</Nav.Link>
+          <Nav.Link href="/" className='navigation-about'>About Course</Nav.Link>
+          <Nav.Link href="/register" className='navigation-register'>Join Course</Nav.Link>
     
           </Nav>
         </Navbar.Collapse>

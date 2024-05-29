@@ -4,8 +4,8 @@
   .banner {
     width: 100vw;
     height: 500px;
-    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
-      linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    background: linear-gradient(90deg, #090909 0%, rgba(0, 0, 0, 0) 90%),
+      linear-gradient(180deg, #0b0b0b 0%, rgba(0, 0, 0, 0) 100%),
       linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
 
     .row {
