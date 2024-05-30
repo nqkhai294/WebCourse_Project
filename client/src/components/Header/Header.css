@@ -7,9 +7,7 @@
   a {
     color: white;
 
-    &:hover {
-      color: #61dafb !important;
-    }
+    
   }
 
   .logo-course {
@@ -18,14 +16,21 @@
     font-weight: 800;
     font-size: 30px !important;
     font-family: math;
+
+    &:hover {
+      color: white !important;
+    }
   }
 
   .navigation-home, .navigation-about, .navigation-news, .navigation-register{
     color:white !important;
-    
     font-size: 17px;
     margin-left: 30px;
     font-weight: 400;
+
+    &:hover {
+      color: #8835f4 !important;
+    }
   }
 
   
