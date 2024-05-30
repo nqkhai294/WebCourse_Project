@@ -1,75 +1,84 @@
 .Register-form {
-    display: flex;
-    height: 140vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+  display: flex;
+  height: 140vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
-    background-size: cover;
+  background-size: cover;
 }
 
 .register-container {
-    background-color:#1b1a1a;
-    color: white;
-    width: 100%;
-    max-width: 650px;
-    padding: 28px;
-    margin: 0 28px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px white;
+  background-color: white;
+  color: black;
+  width: 100%;
+  max-width: 650px;
+  padding: 28px;
+  margin: 0 28px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px white;
 }
 
 .register-header {
-    text-align: right;
+  text-align: right;
 }
 
 .register-title {
-    font-size: 26px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 10px;
-    
-    border-bottom: solid 1px white;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+
+  border-bottom: solid 1px black;
 }
 
 .register-welcome {
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
 }
 
 .register-form {
-    label {
-        padding-top: 15px;
-        width: 150px;
-        
+  label {
+    padding-top: 15px;
+    width: 150px;
+
+    &.gender {
+      width: 70px;
     }
+  }
 
-    input {
-        height: 35px;
-        border-radius: 7px;
-        border: 1px solid grey;
-        cursor: pointer;
-    }
+  input {
+    height: 35px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    cursor: pointer;
+  }
 
+  input[type="text"],
+  input[type="email"],
+  input[type="date"] {
+    min-width: 250px;
+    min-height: 30px;
+  }
 
-    input[type='text'], input[type='email'], input[type='date'] {
-        min-width: 200px;
-    }
+  input[type="text"].purpose {
+    height: 70px;
+  }
 
-    input::placeholder {
-        opacity: 0.3;
-    }
+  input::placeholder {
+    opacity: 0.3;
+  }
 
-    
 }
 
-.submit {
-    
+.submit-form {
+    position: relative;
+    height: 60px;
 
-    .submit-btn {
-        background-color: #8835f4;
+    .form-submit-btn {
+        background-color: #8835f4 !important;
         color: #ffffff;
         width: 10em;
         height: 3em;
@@ -78,12 +87,15 @@
         border-top-right-radius: 46px;
         border-bottom-right-radius: 46px;
         border-bottom-left-radius: 46px;
-        
+        position: absolute;
+        right: 0px;
         margin-top: 20px;
-        margin-left: 12em;
         font-weight: 500;
-    }
+      }
 }
 
-
+.required {
+    color: red;
+    padding-left: 10px;
+}
 

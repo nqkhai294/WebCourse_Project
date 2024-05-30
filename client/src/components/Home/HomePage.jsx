@@ -27,13 +27,7 @@ const HomePage = (props) => {
       </div>
       {/* End Banner */}
 
-      {/* Start news */}
-      <div className="news">
-        <p className="news-notice">/News</p>
-
-        <div className="news-content">Write your content here!</div>
-      </div>
-      {/* End news */}
+      
 
       {/* Start about us */}
       <div className="about-us">
@@ -55,14 +49,7 @@ const HomePage = (props) => {
         </div>
       </div>
       {/* End about us */}
-
-      <div className="register">
-        <button>
-          <NavLink to="/register" className="nav-link">
-            Join now
-          </NavLink>
-        </button>
-      </div>
+      
     </div>
   );
 };
