@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "birth_year": {
+      "type": "date",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "workplace": {
+      "type": "string"
+    },
+    "course_expectation": {
+      "type": "string"
+    },
+    "occupation_type": {
+      "type": "enumeration",
+      "enum": [
+        "student",
+        "working professional"
+      ],
+      "required": true
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "no knowledge",
+        "some knowledge",
+        "expert knowledge"
+      ]
+    }
+  }
+}
