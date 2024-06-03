@@ -1,18 +1,81 @@
-.footer {
+footer {
+    width: 100%;
+    position: fixed;
+    left: 0; 
+    bottom: 0;
+    background: #304146;
+    color: #fff;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 18px;
+    line-height: 21px;
+    height: 18%;
+    
+    .aboutUs {
+        font-size: 80%;
+        line-height: 110%;
+    }
+    .office {
+        font-size: 80%;
+        line-height: 110%;
+    }
+}
+.row {
+    width: 90%;
+    margin: auto;
     display: flex;
-    height: 70px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col {
+    width: 30%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+    
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 10px;
     position: relative;
-    background-color: #20232a;
-    color: white;
+    
+}
+.logo {
+   width: 100px;
+   margin-bottom: 5px; 
+}
+ul li {
+    font-size: 80%;
+    line-height: 110%;
+    margin-bottom: 12px;
+}
 
-    .footer-content {
-        margin-left: 30px;
-        margin-top: 15px;
+
+.social {
+    height: 50px;
+    width: 50px;
+    margin-right: 5%;
+}
+
+
+@media screen and (max-width: 800px) {
+    footer {
+        display: block;
+        height: 12%;
+        padding-bottom: 5%;
     }
-
-    .footer-img {
-        position: absolute;
-        right: 30px;
+    p {
+        display: none;
     }
-
+    ul li {
+        display: none;
+    }
+    .hotline {
+        display: none;
+    }
+    .social {
+        display: none;
+    }
 }
