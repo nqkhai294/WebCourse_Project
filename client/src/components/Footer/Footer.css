@@ -1,90 +1,81 @@
-footer {
-    width: 100%;
-    position: fixed;
-    left: 0; 
-    bottom: 0;
-    background: #304146;
-    color: #fff;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: 18px;
-    line-height: 21px;
-    height: 18%;
-    
-    .aboutUs {
-        font-size: 80%;
-        line-height: 110%;
-    }
-    .office {
-        font-size: 80%;
-        line-height: 110%;
-    }
-    .col {
-        width: 100%;
-        padding-right: 10%;
-        padding-top: 2%;
-        padding-bottom: 2%; 
-    }
+.section_padding {
+    padding: 4rem 4 rem;
 }
-.row {
-    width: 90%;
-    margin: auto;
+
+.footer {
+    background-color: #304146;
+}
+.sb_footer {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-direction: column;
+    
+}
+.sb_footer-links {
+    display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.sb_footer-links-div {
+    width: 400px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+}
+a {
+    color: rgb(175, 175, 179);
+    text-decoration: none;
+}
+.sb_footer-links-div h4 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0.9rem;
+}
+.sb_footer-links-div p {
+    font-size:12px;
+    line-height: 15px;
+    margin: 0,5rem 0;
+    cursor: pointer;
 }
 
-.col h3{
-    width: fit-content;
-    margin-bottom: 10px;
-    position: relative;
+
+.sb_footer-below {
+    display: flex;
     
-}
-.logo {
-   width: 100px;
-   margin-bottom: 5px; 
-}
-ul li {
-    font-size: 80%;
-    line-height: 110%;
-    margin-bottom: 12px;
+    justify-content:center;
+    margin-top: 0.2rem;
 }
 
-
-.social {
-    height: 50px;
-    width: 50px;
-    margin-right: 5%;
+hr {
+    color: white !important;
+    width: 100%;
 }
+.sb_footer-copyright {
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+    font-weight:  600;
+}
+@media screen and (max-width: 850px) {
+    .sb_footer-heading h1 {
+        font: size 44px;
+        line-height: 50px;
+    }
 
+    .sb_footer-links div {
+        margin: 1rem;
+    }
 
-@media screen and (max-width: 800px) {
-    
-    footer {
-        display: block;
-        height: 6%;
-        
-        
-        .col {
-            width: 20%;
-            margin-right: 5%;
-        }
-        h3 {
-            font-size: 60%;
-            
-        }
+    .sb_footer-below {
+        justify-content: center;
     }
-    p {
-        display: none;
-    }
-    ul li {
-        display: none;
-    }
-    .hotline {
-        display: none;
-    }
-    .social {
-        display: none;
-    }
+
+}
+#social_media {
+    flex-direction: row;
 }
