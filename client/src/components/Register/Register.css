@@ -7,7 +7,7 @@
 
 .Register-form {
   display: flex;
-  height: 1200px;
+  height: 800px;
   justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
@@ -20,7 +20,7 @@
   background-color: white;
   color: black;
   width: 100%;
-  max-width: 650px;
+  width: 650px;
   padding: 28px;
   margin: 0 28px;
   border-radius: 10px;
@@ -173,5 +173,13 @@
 @media screen and (max-width: 600px) {
   input[type='radio'] {
     /* display: block; */
+  }
+
+  .Register-form {
+    height: 1100px;
+
+    .register-container {
+      
+    }
   }
 }
