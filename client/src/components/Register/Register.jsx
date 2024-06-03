@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Register.css";
+import logo from "../../assets/Logo.png"
 
 const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
@@ -94,7 +95,9 @@ const Register = () => {
       {submitSuccess === "false" && (
         <div className="Register-form">
           <div className="register-container">
-            <div className="register-header">A Logo</div>
+            <div className="register-header">
+              <img src={logo} className="logo-img"></img>
+            </div>
 
             <div className="register-title">Connect with us!</div>
 
@@ -104,7 +107,7 @@ const Register = () => {
 
             <div className="register-form">
               <div id="name-of-user">
-                <label>Họ tên</label>
+                <label>Your name</label>
                 <input
                   type="text"
                   name="username"
@@ -115,7 +118,7 @@ const Register = () => {
               </div>
 
               <div>
-                <label>Ngày sinh</label>
+                <label>Date of birth</label>
                 <input
                   type="date"
                   name="birth"
@@ -125,35 +128,39 @@ const Register = () => {
               </div>
 
               <div>
-                <label>Giới tính</label>
-                <input
-                  type="radio"
-                  name="gender"
-                  value="Nam"
-                  onChange={(e) => handleChange(e)}
-                ></input>
+                <label>Gender</label>
+                
                 <label for="male" className="gender">
-                  Nam
-                </label>
-
                 <input
                   type="radio"
                   name="gender"
-                  value="Nữ"
+                  value="male"
+                  id='male'
                   onChange={(e) => handleChange(e)}
                 ></input>
+                  Male
+                </label>
+
+                
                 <label for="female" className="gender">
-                  Nữ
-                </label>
-
                 <input
                   type="radio"
                   name="gender"
-                  value="Khác"
+                  value="female"
                   onChange={(e) => handleChange(e)}
                 ></input>
+                  Female
+                </label>
+
+                
                 <label for="other" className="gender">
-                  Khác
+                <input
+                  type="radio"
+                  name="gender"
+                  value="other"
+                  onChange={(e) => handleChange(e)}
+                ></input>
+                  Other
                 </label>
 
                 <span id="error_gender" className="error"></span>
@@ -164,47 +171,48 @@ const Register = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="Your email"
                   onChange={(e) => handleChange(e)}
                 ></input>
                 <span id="error_email" className="error"></span>
               </div>
 
               <div>
-                <label>Số điện thoại</label>
+                <label>Phone number</label>
                 <input
                   type="text"
                   name="phone"
+                  placeholder="Your phone number"
                   onChange={(e) => handleChange(e)}
                 ></input>
                 <span id="error_phone" className="error"></span>
               </div>
 
               <div>
-                <label>Bạn là </label>
-                <select name="role" onChange={(e) => handleChange(e)}>
-                  <option>Sinh viên</option>
-                  <option>Người đi làm</option>
-                  <option>Khác</option>
+                <label>You are </label>
+                <select name="role" onChange={(e) => handleChange(e)} className="role">
+                  <option>Student</option>
+                  <option>Employee</option>
+                  <option>Other</option>
                 </select>
 
                 <span id="error_role" className="error"></span>
               </div>
 
               <div>
-                <label>Kiến thức về AI </label>
-                <select name="knowleadge" onChange={(e) => handleChange(e)}>
-                  <option>Chưa biết gì</option>
-                  <option>Mới tiếp cận</option>
-                  <option>Có hiểu biết</option>
-                  <option>Chuyên gia</option>
+                <label>Knowledge about AI </label>
+                <select name="knowleadge" onChange={(e) => handleChange(e)} className="knowleadge">
+                  <option>Uninformed</option>
+                  <option>Basic understanding</option>
+                  <option>Knowledgeable</option>
+                  <option>Expert</option>
                 </select>
 
                 <span id="error_knowleadge" className="error"></span>
               </div>
 
               <div>
-                <label>Mong muốn qua khóa học</label>
+                <label>Your goals</label>
                 <input
                   type="text"
                   className="purpose"
@@ -220,7 +228,7 @@ const Register = () => {
                   className="form-submit-btn"
                   onClick={() => hanldeSubmit(Event)}
                 >
-                  Đăng ký ngay
+                  Register now
                 </button>
               </div>
             </div>
@@ -233,9 +241,9 @@ const Register = () => {
       {submitSuccess === "true" && (
         <div className="submit-success">
           <div className="submit-success-notify">
-            <div className="notification"> Đăng ký thành công.</div>
+            <div className="notification"> Register successfully.</div>
             <div className="home_back">
-              <a href="/">&#60;&#60; Về trang chủ</a>
+              <a href="/">&#60;&#60; Go to Homepage</a>
             </div>
           </div>
         </div>

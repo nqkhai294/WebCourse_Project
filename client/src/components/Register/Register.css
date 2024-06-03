@@ -7,7 +7,7 @@
 
 .Register-form {
   display: flex;
-  height: 140vh;
+  height: 1200px;
   justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
@@ -29,6 +29,10 @@
 
 .register-header {
   text-align: right;
+  .logo-img {
+    height: 42px;
+    width: 150px;
+  }
 }
 
 .register-title {
@@ -47,9 +51,13 @@
 }
 
 .register-form {
+  padding-left: 25px;
+
   label {
+    font-size: 16px;
     padding-top: 15px;
     width: 150px;
+    margin-right: 10px;
 
     &.gender {
       width: 70px;
@@ -59,8 +67,23 @@
   input {
     height: 35px;
     border-radius: 7px;
+    font-size: 14px;
     border: 1px solid grey;
     cursor: pointer;
+
+    
+
+    &:focus-visible {
+      outline: none;
+      border: 1px solid black;
+    }
+
+    
+
+    &::placeholder {
+      opacity: 0.3;
+      
+    }
   }
 
   input[type="text"],
@@ -71,39 +94,46 @@
   }
 
   input[type="text"].purpose {
+    margin-top: 10px;
     height: 70px;
   }
 
-  input::placeholder {
-    opacity: 0.3;
+  select {
+    font-size: 14px;
+    border-radius: 5px;
+
+    &:focus-visible {
+      outline: none;
+      border: 1px solid black;
+    }
   }
 
 }
 
 .submit-form {
-    position: relative;
-    height: 60px;
+  position: relative;
+  height: 60px;
 
-    .form-submit-btn {
-        background-color: #8835f4 !important;
-        color: #ffffff;
-        width: 10em;
-        height: 3em;
-        border: 2px solid black;
-        border-top-left-radius: 46px;
-        border-top-right-radius: 46px;
-        border-bottom-right-radius: 46px;
-        border-bottom-left-radius: 46px;
-        position: absolute;
-        right: 0px;
-        margin-top: 20px;
-        font-weight: 500;
-      }
+  .form-submit-btn {
+    background-color: #0e86cb !important;
+    color: #ffffff;
+    width: 10em;
+    height: 3em;
+    border: 1px solid black;
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+    border-bottom-right-radius: 46px;
+    border-bottom-left-radius: 46px;
+    position: absolute;
+    right: 0px;
+    margin-top: 20px;
+    font-weight: 500;
+  }
 }
 
 .error {
-    color: red;
-    padding-left: 10px;
+  color: red;
+  padding-left: 10px;
 }
 
 .submit-success {
@@ -130,12 +160,18 @@
 
     .home_back {
       padding-top: 20px;
-      
+
       a {
         text-decoration: none;
-        color:#000000;
+        color: #000000;
       }
     }
   }
 }
 
+
+@media screen and (max-width: 600px) {
+  input[type='radio'] {
+    /* display: block; */
+  }
+}
