@@ -19,6 +19,12 @@ footer {
         font-size: 80%;
         line-height: 110%;
     }
+    .col {
+        width: 100%;
+        padding-right: 10%;
+        padding-top: 2%;
+        padding-bottom: 2%; 
+    }
 }
 .row {
     width: 90%;
@@ -28,14 +34,7 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
 }
-.col {
-    width: 30%;
-    padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    
-    
-}
+
 .col h3{
     width: fit-content;
     margin-bottom: 10px;
@@ -61,10 +60,20 @@ ul li {
 
 
 @media screen and (max-width: 800px) {
+    
     footer {
         display: block;
-        height: 12%;
-        padding-bottom: 5%;
+        height: 6%;
+        
+        
+        .col {
+            width: 20%;
+            margin-right: 5%;
+        }
+        h3 {
+            font-size: 60%;
+            
+        }
     }
     p {
         display: none;
