@@ -3,7 +3,7 @@
 
   .banner {
     width: 100vw;
-    height: 560px;
+    height: 620px;
     background: linear-gradient(90deg, #090909 0%, rgba(0, 0, 0, 0) 90%),
       linear-gradient(180deg, #0b0b0b 0%, rgba(0, 0, 0, 0) 100%),
       linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
@@ -33,6 +33,7 @@
       }
 
       .blog-description {
+        
         p {
           font-size: clamp(18px, 1.528vw, 22px);
           line-height: 130%;

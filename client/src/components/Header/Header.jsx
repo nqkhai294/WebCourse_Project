@@ -4,8 +4,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from "react-router-dom";
 import './Header.css'
+import { useState, useEffect } from 'react';
 
 const Header = () => {
+
   return (
     <div className='nav-header'>
     <Navbar expand='lg' bg='header'>
