@@ -16,7 +16,7 @@ function App() {
       </div>
 
       <div className="app-footer">
-        <Footer />
+        <Footer/>
       </div>
     </div>
   );
