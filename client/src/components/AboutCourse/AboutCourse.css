@@ -1,22 +1,21 @@
 .about-course {
   padding-top: 70px;
-  height: 1400px;
+  height: 1450px;
   width: 100vw;
   background-color: black;
   .overall-introduction {
-    
     height: 620px;
     background: linear-gradient(90deg, #090909 0%, rgba(0, 0, 0, 0) 90%),
-    linear-gradient(180deg, #0b0b0b 0%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
+      linear-gradient(180deg, #0b0b0b 0%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
 
     padding: 0px 12vw;
-    padding-top:120px;
+    padding-top: 120px;
     width: 100vw;
     z-index: 0;
     .sub-title {
       color: #ffffff;
-      
+
       text-transform: uppercase;
       letter-spacing: 0.3em;
       font-weight: 500;
@@ -46,13 +45,14 @@
 
   .ab-information {
     width: 100vw;
-    color:#ffffff;
-    padding: 50px 12vw;
-    background-color:#161616;
+    color: #ffffff;
+    padding: 75px 12vw;
+    background-color: #161616;
+
     .sub-title {
       color: #ffffff;
       width: 30vw;
-      border-bottom:1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
       text-transform: uppercase;
       letter-spacing: 0.3em;
       font-weight: 500;
