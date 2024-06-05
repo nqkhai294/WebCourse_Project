@@ -26,7 +26,9 @@
       "unique": true
     },
     "phone_number": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "workplace": {
       "type": "string"
@@ -38,15 +40,17 @@
       "type": "enumeration",
       "enum": [
         "student",
-        "working professional"
+        "employee",
+        "other"
       ],
       "required": true
     },
     "level": {
       "type": "enumeration",
       "enum": [
-        "no knowledge",
-        "some knowledge",
+        "uninformed",
+        "basic understanding",
+        "knowledgeable",
         "expert knowledge"
       ]
     }
