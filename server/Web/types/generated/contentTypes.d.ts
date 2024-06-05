@@ -403,16 +403,18 @@ export interface ApiStudentStudent extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    birth_year: Attribute.Date & Attribute.Required;
+    birth: Attribute.Date & Attribute.Required;
     email: Attribute.String & Attribute.Required & Attribute.Unique;
     phone_number: Attribute.String & Attribute.Required & Attribute.Unique;
-    workplace: Attribute.String;
-    course_expectation: Attribute.String;
+    course_expectation: Attribute.String & Attribute.Required;
     occupation_type: Attribute.Enumeration<['student', 'employee', 'other']> &
       Attribute.Required;
     level: Attribute.Enumeration<
       ['uninformed', 'basic understanding', 'knowledgeable', 'expert knowledge']
-    >;
+    > &
+      Attribute.Required;
+    gender: Attribute.Enumeration<['male', 'female', 'other']> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

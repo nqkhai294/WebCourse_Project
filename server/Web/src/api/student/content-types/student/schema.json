@@ -16,7 +16,7 @@
       "type": "string",
       "required": true
     },
-    "birth_year": {
+    "birth": {
       "type": "date",
       "required": true
     },
@@ -30,11 +30,9 @@
       "unique": true,
       "required": true
     },
-    "workplace": {
-      "type": "string"
-    },
     "course_expectation": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "occupation_type": {
       "type": "enumeration",
@@ -52,7 +50,17 @@
         "basic understanding",
         "knowledgeable",
         "expert knowledge"
-      ]
+      ],
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ],
+      "required": true
     }
   }
 }
