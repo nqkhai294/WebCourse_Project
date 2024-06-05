@@ -1,0 +1,21 @@
+.news {
+    background-color: #333;
+    padding-top: 70px;
+    .news-notice {
+      background-color: #000000;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 9px;
+      width: 100vw;
+      padding: 20px 12.5vw;
+      line-height: 30px;
+    }
+
+    .news-content {
+      background-color: #333;
+      color: #ffffff;
+    }
+  }

@@ -1,38 +1,43 @@
 
+
 .nav-header {
   z-index: 1;
-    width: 100vw;
+  width: 100vw;
   background-color: black;
   position: fixed;
   a {
     color: white;
 
-    &:hover {
-      color: #61dafb !important;
-    }
+    
   }
 
   .logo-course {
     margin-left: 60px;
-    margin-right: 30px;
+    margin-right: 100px;
     font-weight: 800;
     font-size: 30px !important;
-    color: #61dafb;
     font-family: math;
+
+    &:hover {
+      color: white !important;
+    }
   }
 
-  .navigation-home, .navigation-about{
+  .navigation-home, .navigation-about, .navigation-news, .navigation-register{
     color:white !important;
-    
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 30px;
-    font-weight: 500;
+    font-weight: 400;
+
+    &:hover {
+      color: #8835f4 !important;
+    }
   }
 
   
 
   .navbar-toggler {
-    background-color: gray;
+    background-color: #222222;
     border: 2px solid white;
     position: absolute;
     right: 17px;
@@ -40,6 +45,7 @@
   }
 
   .navbar-toggler-icon {
-    
+      background-image: url(D:\Workspace\BTL_Web\client\src\assets\menu_icon.jpg);
+      
   }
 }
