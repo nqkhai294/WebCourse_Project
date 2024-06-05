@@ -6,7 +6,6 @@ const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
 
   const [userDataForm, setUserDataForm] = useState({
-    identityCode: "",
     username: "",
     birth: "",
     gender: "",
