@@ -1,6 +1,7 @@
 .news {
     background-color: #333;
     padding-top: 70px;
+    height: 1200px;
     .news-notice {
       background-color: #000000;
       color: #ffffff;
