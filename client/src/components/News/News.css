@@ -1,21 +1,46 @@
 .news {
-    background-color: #333;
-    padding-top: 70px;
-    .news-notice {
-      background-color: #000000;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      font-weight: 500;
-      font-size: 14px;
-      margin-bottom: 9px;
-      width: 100vw;
-      padding: 20px 12.5vw;
-      line-height: 30px;
-    }
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
+}
 
-    .news-content {
-      background-color: #333;
-      color: #ffffff;
-    }
-  }
+.news-notice {
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 9px;
+  width: 100vw;
+  padding: 20px 12.5vw;
+  line-height: 30px;
+}
+
+.news-content {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.card {
+  background-color: #1a1a1a; /* Dark background color */
+}
+
+.card .card-title {
+  color: #ffffff; /* White text for titles */
+}
+
+.card .card-text {
+  color: #cccccc; /* Light grey text for descriptions */
+}
+
+.card img {
+  border-bottom: 1px solid #333333; /* Slight border to separate image and content */
+}
+.cover-img {
+  width: 100%;
+  max-width: 600px; /* Adjust this value as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+  display: block;
+}
