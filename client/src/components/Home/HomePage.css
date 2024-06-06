@@ -1,5 +1,6 @@
 .homepage {
-  padding-top: 70px;
+  padding-top: 45px;
+  background-color: #090909;
 
   .banner {
     width: 100vw;
@@ -26,7 +27,7 @@
 
       h1 {
         color: white;
-        font-size: clamp(30px, 5.972vw, 76px);
+        font-size: clamp(36px, 5.972vw, 70px);
         line-height: 115%;
         font-family: auto;
         font-weight: 700;

@@ -3,6 +3,7 @@
   width: 100vw;
   background-color: black;
   position: fixed;
+  top: 0px;
   a {
     color: white;
 

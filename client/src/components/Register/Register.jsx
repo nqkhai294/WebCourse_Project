@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Register.css";
 import logo from "../../assets/Logo.png";
-import UseFetch from "../FetchData/UseFetch";
+
 
 const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
