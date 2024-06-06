@@ -1,3 +1,24 @@
 ###
 GET http://localhost:1337/api/students
 Authorization: Bearer 0c7e4a2fffdb4edf63341fc59e0daebb97cc0071da70ed21e58202e420d96548f81b4e231a5fd8bf6eaaa2e49e159c532e30f9cf9df283bc21617b90b3089a4fd9d2b8fb2b13a88384f336a42c5c72161079da64b32a8864fd5c15c95deda7657e178ea41c6bd5a1fa8d2f6075bcf326df77597b4cd6f2f9a3d5211f53cbe9a0
+
+
+###
+POST http://localhost:1337/api/students
+Authorization: Bearer a5fa82dd36fa722046b92d81b1c0afb53eda40ed482120377ec5f8b4e354b5e88b32ee17e9e4d5d3ba3e2d8df92c5f050b2a53fb9e554575e98c58e195604d73665d472ed19415fc76d3705b6e295500157244ae58e965d955276ad0a4afdf3e2457be91a6974828420dc48887752a94f58f1d354fcfacd674ebf82db5ee4d83
+Content-Type: application/json
+
+ {
+    "data": {
+    "name":  "Nguyen Hien Minh",
+    "birth": "2008-04-29",
+    "gender":"male",
+    "email": "soloyasuoii@gmail.com",
+    "phone_number" :"02342141287",
+    "workplace" : "Ha Noi",
+    "course_expectation" : "hay",
+    "occupation_type": "student",
+    "level": "basic understanding"
+    }
+    
+ }
