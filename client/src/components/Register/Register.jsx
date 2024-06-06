@@ -189,6 +189,7 @@ const Register = () => {
                   name="username"
                   placeholder="Your name"
                   onChange={(e) => handleChange(e)}
+                  required
                 ></input>
                 <div id="error_username" className="error"></div>
               </div>
@@ -199,6 +200,7 @@ const Register = () => {
                   type="date"
                   name="birth"
                   onChange={(e) => handleChange(e)}
+                  required
                 ></input>
                 <div id="error_birth" className="error"></div>
               </div>
@@ -213,6 +215,7 @@ const Register = () => {
                     value="male"
                     id="male"
                     onChange={(e) => handleChange(e)}
+                    required
                   ></input>
                   Male
                 </label>
