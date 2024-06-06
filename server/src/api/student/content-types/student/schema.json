@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "birth": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ],
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "required": true,
+      "unique": true,
+      "type": "biginteger"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "student",
+        "employee",
+        "other"
+      ],
+      "required": true
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "uninformed",
+        "basic understanding",
+        "knowledgeable",
+        "expert"
+      ],
+      "required": true,
+      "default": "uninformed"
+    }
+  }
+}
