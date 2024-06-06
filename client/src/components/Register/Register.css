@@ -127,8 +127,9 @@
 
 .error {
   color: rgb(255, 55, 55);
-  padding-left: 10px;
-  font-size: 14px;
+  padding-left: 160px;
+  font-size: 13px;
+  font-style: italic;
 }
 
 .submit-success {
@@ -176,7 +177,7 @@
     }
 
     select {
-      display: block;
+     
     }
 
     .error {
@@ -203,6 +204,7 @@
 
     .error {
       display: block;
+      padding-left: 10px;
     }
   }
 }

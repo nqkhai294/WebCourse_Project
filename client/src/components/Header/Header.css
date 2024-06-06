@@ -45,7 +45,7 @@
   }
 
   .navbar-toggler-icon {
-      background-image: url(D:\Workspace\BTL_Web\client\src\assets\menu_icon.jpg);
+      background-image: url(../../assets/menu_icon.jpg);
       
   }
 }

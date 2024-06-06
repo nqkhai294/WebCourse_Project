@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Register.css";
 import logo from "../../assets/Logo.png";
+import UseFetch from "../FetchData/UseFetch";
 
 const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
@@ -16,11 +17,24 @@ const Register = () => {
     purpose: "",
   });
 
-  useEffect(() => {
-    if (submitSuccess === 'true') {
-      console.log(userDataForm)
-    }
-  }, [submitSuccess])
+  const url = "https://httpbin.org/post";
+
+  const fetchData = async (url, data) => {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success: ", data);
+      })
+      .catch((error) => {
+        console.error("Error: ", error);
+      });
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,17 +51,31 @@ const Register = () => {
       ...userDataForm,
     });
 
+    // Send Data to db
     if (
-      ((userDataForm.username !== "" &userDataForm.username !== undefined)) &
+      (userDataForm.username !== "") &
+      (userDataForm.username !== undefined) &
       ((userDataForm.email !== "") & (userDataForm.email !== undefined)) &
       ((userDataForm.birth !== "") & (userDataForm.birth !== undefined)) &
       ((userDataForm.gender !== "") & (userDataForm.gender !== undefined)) &
       ((userDataForm.phone !== "") & (userDataForm.phone !== undefined)) &
       ((userDataForm.role !== "") & (userDataForm.role !== undefined)) &
-      ((userDataForm.knowleadge !== "") & (userDataForm.knowleadge !== undefined)) &
+      ((userDataForm.knowleadge !== "") &
+        (userDataForm.knowleadge !== undefined)) &
       ((userDataForm.purpose !== "") & (userDataForm.purpose !== undefined))
     ) {
       setSubmitSuccess("true");
+      let data = {
+        username: userDataForm.username,
+        birth: userDataForm.birth,
+        email: userDataForm.email,
+        gender: userDataForm.gender,
+        phone: userDataForm.phone,
+        role: userDataForm.role,
+        knowleadge: userDataForm.knowleadge,
+        purpose: userDataForm.purpose
+      };
+      fetchData(url, data);
     }
 
     var error = document.getElementsByClassName("error");
@@ -55,6 +83,7 @@ const Register = () => {
       error[i].innerHTML = "";
     }
 
+    // Handle error for username
     if (
       (userDataForm.username === "") |
       (userDataForm.username === undefined)
@@ -64,22 +93,44 @@ const Register = () => {
       setSubmitSuccess("false");
     }
 
+    // Handle error for email (sai dinh dang)
+    const emailInput = userDataForm.email;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailPattern.test(emailInput)) {
+      let errorItem = document.getElementById("error_email");
+      errorItem.innerHTML = "Email is not in the correct format.";
+      setSubmitSuccess("false")
+    }
+
     if ((userDataForm.email === "") | (userDataForm.email === undefined)) {
       let errorItem = document.getElementById("error_email");
       errorItem.innerHTML = "Email is required.";
       setSubmitSuccess("false");
     }
 
+    // Handle error for date of birth
     if ((userDataForm.birth === "") | (userDataForm.birth === undefined)) {
       let errorItem = document.getElementById("error_birth");
       errorItem.innerHTML = "Birth is required.";
       setSubmitSuccess("false");
     }
 
+    // Handle error for gender
     if ((userDataForm.gender === "") | (userDataForm.gender === undefined)) {
       let errorItem = document.getElementById("error_gender");
       errorItem.innerHTML = "Gender is required.";
       setSubmitSuccess("false");
+    }
+
+    // Handle error for phone
+    const phoneInput = userDataForm.phone;
+    const phonePattern = /[0-9]{10,11}/;
+
+    if (!phonePattern.test(phoneInput)) {
+      let errorItem = document.getElementById("error_phone");
+      errorItem.innerHTML = "Phone number is not in the correct format.";
+      setSubmitSuccess("false")
     }
 
     if ((userDataForm.phone === "") | (userDataForm.phone === undefined)) {
@@ -88,12 +139,14 @@ const Register = () => {
       setSubmitSuccess("false");
     }
 
+    // Handle error for role
     if ((userDataForm.role === "") | (userDataForm.role === undefined)) {
       let errorItem = document.getElementById("error_role");
       errorItem.innerHTML = "Role is required.";
       setSubmitSuccess("false");
     }
 
+    // Handle error for knowleadge
     if (
       (userDataForm.knowleadge === "") |
       (userDataForm.knowleadge === undefined)
@@ -103,6 +156,7 @@ const Register = () => {
       setSubmitSuccess("false");
     }
 
+    // Handle error for purpose
     if ((userDataForm.purpose === "") | (userDataForm.purpose === undefined)) {
       let errorItem = document.getElementById("error_purpose");
       errorItem.innerHTML = "Purpose is required.";
@@ -136,7 +190,7 @@ const Register = () => {
                   placeholder="Your name"
                   onChange={(e) => handleChange(e)}
                 ></input>
-                <span id="error_username" className="error"></span>
+                <div id="error_username" className="error"></div>
               </div>
 
               <div>
@@ -146,7 +200,7 @@ const Register = () => {
                   name="birth"
                   onChange={(e) => handleChange(e)}
                 ></input>
-                <span id="error_birth" className="error"></span>
+                <div id="error_birth" className="error"></div>
               </div>
 
               <div>
@@ -183,7 +237,7 @@ const Register = () => {
                   Other
                 </label>
 
-                <span id="error_gender" className="error"></span>
+                <div id="error_gender" className="error"></div>
               </div>
 
               <div>
@@ -192,9 +246,11 @@ const Register = () => {
                   type="email"
                   name="email"
                   placeholder="Your email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  required
                   onChange={(e) => handleChange(e)}
                 ></input>
-                <span id="error_email" className="error"></span>
+                <div id="error_email" className="error"></div>
               </div>
 
               <div>
@@ -205,7 +261,7 @@ const Register = () => {
                   placeholder="Your phone number"
                   onChange={(e) => handleChange(e)}
                 ></input>
-                <span id="error_phone" className="error"></span>
+                <div id="error_phone" className="error"></div>
               </div>
 
               <div className="select-role">
@@ -220,7 +276,7 @@ const Register = () => {
                   <option>Other</option>
                 </select>
 
-                <span id="error_role" className="error"></span>
+                <div id="error_role" className="error"></div>
               </div>
 
               <div className="select-knowledge">
@@ -236,7 +292,7 @@ const Register = () => {
                   <option>Expert</option>
                 </select>
 
-                <span id="error_knowleadge" className="error"></span>
+                <div id="error_knowleadge" className="error"></div>
               </div>
 
               <div>
@@ -248,7 +304,7 @@ const Register = () => {
                   onChange={(e) => handleChange(e)}
                 ></input>
 
-                <span id="error_purpose" className="error"></span>
+                <div id="error_purpose" className="error"></div>
               </div>
 
               <div className="submit-form">
@@ -274,8 +330,6 @@ const Register = () => {
           </div>
         </div>
       )}
-
-     
     </div>
   );
 };
