@@ -27,7 +27,7 @@ const AboutCourse = (props) => {
         </div>
 
         <div className="ab-content">
-          <h3>Course Content:</h3>
+          <h4>Course Content:</h4>
           <ul>
             <li>Introduction to Artificial Intelligence</li>
             <li>Machine Learning and Deep Learning</li>
@@ -39,13 +39,13 @@ const AboutCourse = (props) => {
         </div>
 
         <div className="ab-schedule">
-          <h3>Course Duration:</h3>
+          <h4>Course Duration:</h4>
           <p>Duration: 2 months</p>
           <p>Schedule: Monday, Wednesday, Friday from 7:30 AM to 10:30 AM</p>
         </div>
 
         <div className="ab-requirements">
-          <h3>Entry Requirements:</h3>
+          <h4>Entry Requirements:</h4>
           <ul>
             <li>Basic knowledge of programming</li>
             <li>Basic knowledge of mathematics and statistics</li>
@@ -53,7 +53,7 @@ const AboutCourse = (props) => {
         </div>
 
         <div className="ab-benefits">
-          <h2>Benefits of Attending the Course:</h2>
+          <h4>Benefits of Attending the Course:</h4>
           <ul>
             <li>Gain a fundamental understanding of Artificial Intelligence</li>
             <li>Access to a community of AI learners and experts</li>
