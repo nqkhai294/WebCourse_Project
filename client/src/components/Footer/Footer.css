@@ -1,81 +1,36 @@
-.section_padding {
-    padding: 4rem 4 rem;
+footer h4,
+footer h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
-.footer {
-    background-color: #304146;
+footer p {
+    font-size: 12px;
+    margin-bottom: 8px; /* Thêm margin-bottom để tạo khoảng cách giữa các đoạn văn */
 }
-.sb_footer {
-    display: flex;
-    flex-direction: column;
-    
+
+footer ul {
+    padding-left: 0;
+    list-style: none;
 }
-.sb_footer-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: left;
-    margin-bottom: 2rem;
+
+footer li {
+    margin-bottom: 4px;
 }
-.sb_footer-links-div {
-    width: 300px;
-    margin: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+
+footer a {
     color: white;
 }
-a {
-    color: rgb(175, 175, 179);
-    text-decoration: none;
-}
-.sb_footer-links-div h4 {
-    font-size: 14px;
-    line-height: 17px;
-    margin-bottom: 0.9rem;
-}
-.sb_footer-links-div p {
-    font-size:12px;
-    line-height: 15px;
-    margin: 0,5rem 0;
-    cursor: pointer;
+
+footer .btn {
+    padding: 5px;
 }
 
-
-.sb_footer-below {
-    display: flex;
-    
-    justify-content:center;
-    margin-top: 0.2rem;
+footer #social_media .d-flex a {
+    display: inline-block;
 }
 
-hr {
-    color: white !important;
-    width: 100%;
-}
-.sb_footer-copyright {
-    font-size: 13px;
-    line-height: 15px;
-    color: rgb(255, 255, 255);
-    font-weight:  600;
-}
-@media screen and (max-width: 850px) {
-    .sb_footer-heading h1 {
-        font: size 44px;
-        line-height: 50px;
-    }
-
-    .sb_footer-links div {
-        margin: 1rem;
-    }
-
-    .sb_footer-below {
-        justify-content: center;
-    }
-
-}
-#social_media {
-    flex-direction: row;
+footer .about-us {
+    text-align: left;
+    margin-left: 8px;
 }
