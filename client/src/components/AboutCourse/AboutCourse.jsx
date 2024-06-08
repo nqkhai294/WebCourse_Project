@@ -23,40 +23,40 @@ const AboutCourse = (props) => {
       <div className="ab-information">
         <div class="sub-title">/ Information</div>
         <div className="ab-header">
-          <h2>Khóa học trí tuệ nhân tạo (AI)</h2>
+          <h2>Artificial Intelligence (AI) Course</h2>
         </div>
 
         <div className="ab-content">
-          <h3>Nội dung khóa học</h3>
+          <h3>Course Content:</h3>
           <ul>
-            <li>Giới thiệu về Trí tuệ nhân tạo</li>
-            <li>Học máy và Học sâu</li>
-            <li>Xử lý ngôn ngữ tự nhiên</li>
-            <li>Thị giác máy tính</li>
-            <li>Robot học</li>
-            <li>Ứng dụng AI trong công nghiệp</li>
+            <li>Introduction to Artificial Intelligence</li>
+            <li>Machine Learning and Deep Learning</li>
+            <li>Natural Language Processing</li>
+            <li>Computer Vision</li>
+            <li>Robotics</li>
+            <li>AI Applications in Industry</li>
           </ul>
         </div>
 
         <div className="ab-schedule">
-          <h3>Thời gian khóa học</h3>
-          <p>Thời gian: 2 tháng</p>
-          <p>Lịch học: Thứ 2, Thứ 4, Thứ 6 từ 7:30 - 10:30</p>
+          <h3>Course Duration:</h3>
+          <p>Duration: 2 months</p>
+          <p>Schedule: Monday, Wednesday, Friday from 7:30 AM to 10:30 AM</p>
         </div>
 
         <div className="ab-requirements">
-          <h3>Yêu cầu đầu vào</h3>
+          <h3>Entry Requirements:</h3>
           <ul>
-            <li>Kiến thức cơ bản về lập trình</li>
-            <li>Kiến thức cơ bản về toán học và thống kê</li>
+            <li>Basic knowledge of programming</li>
+            <li>Basic knowledge of mathematics and statistics</li>
           </ul>
         </div>
 
         <div className="ab-benefits">
-          <h2>Lợi ích khi tham gia khóa học</h2>
+          <h2>Benefits of Attending the Course:</h2>
           <ul>
-            <li>Có hình dung cơ bản về Trí tuệ nhân tạo</li>
-            <li>Truy cập vào cộng đồng học viên và chuyên gia AI</li>
+            <li>Gain a fundamental understanding of Artificial Intelligence</li>
+            <li>Access to a community of AI learners and experts</li>
           </ul>
         </div>
       </div>
