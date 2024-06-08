@@ -375,7 +375,8 @@ export interface ApiNewNew extends Schema.CollectionType {
   };
   attributes: {
     newsTitle: Attribute.String;
-    coverImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    coverImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
     newsDesc: Attribute.Text;
     newsAuthor: Attribute.String;
     newsContent: Attribute.Blocks;

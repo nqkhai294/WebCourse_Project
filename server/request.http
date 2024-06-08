@@ -1,4 +1,6 @@
-GET http://localhost:1337/api/news###
+GET http://localhost:1337/api/news?populate=%2A
+
+###
 GET http://localhost:1337/api/students
 Authorization: Bearer 0f92610ef3bd60c3ae3d05c3f56e08c5acb6fd9db79c91526786efa834647b0e9c5ff7342b0bec3a38140bde60c9b22619dfc909bef96345088f1235900ac2130e863b61b02ae9ed8520d2637f29b71701cc888a4717cb5db5dd4d5d79f8afea3911aeeadb9502ca2d8a346e616481e34b0623a5943fc45f206b522714c7ed2f
 
@@ -8,14 +10,19 @@ Content-Type: application/json
 
 {
     "data": {
-        "name" :"Pham Quy Son",
+        "name" :"Phammmm Son",
         "birth": "2004-11-15",
         "gender": "male",
-        "email" : "phamquyson@gmail.com",
-        "phone" : "09214141",
+        "email" : "phamson@gmail",
+        "phone" : "092141411111",
         "role": "student",
         "purpose" :" biet nhieu hon nhung gi chua biet",
         "level" : "expert"
 
     }
 }
+
+###
+
+GET http://http://localhost:1337/uploads/base64_17176017849621032715406_cb93023d9f.jpeg
+Content-Type: application/json

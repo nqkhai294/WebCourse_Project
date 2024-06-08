@@ -8,7 +8,7 @@ import useFetchData from '../hook/useFetchData';
 
 const Routers = () => {
 
-    const { data, loading, error } = useFetchData('/news');
+    const { data, loading, error } = useFetchData('/news?populate=%2A');
     if (loading) {
         return <div>Loading...</div>;
     }
