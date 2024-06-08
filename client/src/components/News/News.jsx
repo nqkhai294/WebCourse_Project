@@ -29,14 +29,7 @@ const News = () => {
             content: 'Intro to Web3 Day 1: Intro to Web3 ...',
             authorName: 'John Doe',
         },
-        {
-          id: 4,
-          title: 'new 4',
-          desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          coverImg: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/876c22100707927.5f0ec9851cb08.png',
-          content: 'Intro to Web3 Day 1: Intro to Web3 ...',
-          authorName: 'John Doe',
-        }
+        
     ];
 
     return (
