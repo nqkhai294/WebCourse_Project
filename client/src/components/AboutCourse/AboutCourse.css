@@ -11,7 +11,7 @@
 
     padding: 0px 12vw;
     padding-top: 120px;
-    width: 100vw;
+    width: 100%;
     z-index: 0;
     .sub-title {
       color: #ffffff;
@@ -44,7 +44,7 @@
   }
 
   .ab-information {
-    width: 100vw;
+    width: 100%;
     color: #ffffff;
     padding: 75px 12vw;
     background-color: #161616;
