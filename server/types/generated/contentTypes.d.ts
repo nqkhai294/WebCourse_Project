@@ -362,49 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiStudentStudent extends Schema.CollectionType {
-  collectionName: 'students';
-  info: {
-    singularName: 'student';
-    pluralName: 'students';
-    displayName: 'student';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    birth: Attribute.Date & Attribute.Required;
-    gender: Attribute.Enumeration<['male', 'female', 'other']> &
-      Attribute.Required;
-    email: Attribute.Email & Attribute.Required & Attribute.Unique;
-    phone: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
-    role: Attribute.Enumeration<['student', 'employee', 'other']> &
-      Attribute.Required;
-    purpose: Attribute.Text;
-    level: Attribute.Enumeration<
-      ['uninformed', 'basic understanding', 'knowledgeable', 'expert']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'uninformed'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::student.student',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::student.student',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -831,6 +788,72 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiPostPost extends Schema.CollectionType {
+  collectionName: 'posts';
+  info: {
+    singularName: 'post';
+    pluralName: 'posts';
+    displayName: 'post';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
+    content: Attribute.Text & Attribute.Required;
+    image: Attribute.Media<'images', true> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiStudentStudent extends Schema.CollectionType {
+  collectionName: 'students';
+  info: {
+    singularName: 'student';
+    pluralName: 'students';
+    displayName: 'student';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    birth: Attribute.Date & Attribute.Required;
+    gender: Attribute.Enumeration<['male', 'female', 'other']> &
+      Attribute.Required;
+    email: Attribute.Email & Attribute.Required & Attribute.Unique;
+    phone: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
+    role: Attribute.Enumeration<['student', 'employee', 'other']> &
+      Attribute.Required;
+    purpose: Attribute.Text;
+    level: Attribute.Enumeration<
+      ['uninformed', 'basic understanding', 'knowledgeable', 'expert']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'uninformed'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -841,7 +864,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::student.student': ApiStudentStudent;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -850,6 +872,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::post.post': ApiPostPost;
+      'api::student.student': ApiStudentStudent;
     }
   }
 }
