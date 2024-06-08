@@ -16,6 +16,11 @@
     "@strapi/plugin-i18n": "4.24.5",
     "@strapi/plugin-cloud": "4.24.5",
     "better-sqlite3": "8.6.0",
+    "@strapi/strapi": "4.24.5",
+    "@strapi/plugin-users-permissions": "4.24.5",
+    "@strapi/plugin-i18n": "4.24.5",
+    "@strapi/plugin-cloud": "4.24.5",
+    "better-sqlite3": "8.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
@@ -25,7 +30,8 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "aa6e9975-7382-4ca3-8b67-d8e00355a0ce"
+    "uuid": "c9fa558c-d6a9-4d05-8ae9-ca330ffa72ec"
+    
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",

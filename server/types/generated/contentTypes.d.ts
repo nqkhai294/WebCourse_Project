@@ -362,6 +362,119 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiNewNew extends Schema.CollectionType {
+  collectionName: 'news';
+  info: {
+    singularName: 'new';
+    pluralName: 'news';
+    displayName: 'news';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    newsTitle: Attribute.String;
+    coverImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    newsDesc: Attribute.Text;
+    newsAuthor: Attribute.String;
+    newsContent: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiStudentStudent extends Schema.CollectionType {
+  collectionName: 'students';
+  info: {
+    singularName: 'student';
+    pluralName: 'students';
+    displayName: 'student';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    birth: Attribute.Date & Attribute.Required;
+    gender: Attribute.Enumeration<['male', 'female', 'other']> &
+      Attribute.Required;
+    email: Attribute.Email & Attribute.Required & Attribute.Unique;
+    phone: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
+    role: Attribute.Enumeration<['student', 'employee', 'other']> &
+      Attribute.Required;
+    purpose: Attribute.Text;
+    level: Attribute.Enumeration<
+      ['uninformed', 'basic understanding', 'knowledgeable', 'expert']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'uninformed'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiStudentStudent extends Schema.CollectionType {
+  collectionName: 'students';
+  info: {
+    singularName: 'student';
+    pluralName: 'students';
+    displayName: 'student';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    birth: Attribute.Date & Attribute.Required;
+    gender: Attribute.Enumeration<['male', 'female', 'other']> &
+      Attribute.Required;
+    email: Attribute.Email & Attribute.Required & Attribute.Unique;
+    phone: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
+    role: Attribute.Enumeration<['student', 'employee', 'other']> &
+      Attribute.Required;
+    purpose: Attribute.Text;
+    level: Attribute.Enumeration<
+      ['uninformed', 'basic understanding', 'knowledgeable', 'expert']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'uninformed'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -864,6 +977,9 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::new.new': ApiNewNew;
+      'api::student.student': ApiStudentStudent;
+      'api::student.student': ApiStudentStudent;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
