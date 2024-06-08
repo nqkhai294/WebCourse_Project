@@ -166,12 +166,19 @@
 }
 
 @media screen and (max-width: 600px) {
- 
+  input[type="radio"] {
+    /* display: block; */
+  }
 
   .Register-form {
     height: 1100px;
 
-  
+    .register-container {
+    }
+
+    select {
+      display: block;
+    }
 
     .error {
       display: block;
@@ -180,7 +187,9 @@
 }
 
 @media screen and (max-width: 550px) {
-  
+  input[type="radio"] {
+    /* display: block; */
+  }
 
   .Register-form {
     height: 1200px;
