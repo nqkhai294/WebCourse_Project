@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="col-md-3 mb-2 justify-content-start ml-2">
                         <h5>About Us</h5>
                         <p className="small">
-                            I need more context to answer your question accurately. Please provide more information about what you mean by "doan van gi do". Are you asking about a specific phrase or concept in Vietnamese?
+                        University of Engineering and Technology, Vietnam National University, Hanoi
                         </p>
                     </div>
                     <div className="col-md-3 mb-2">
@@ -22,21 +22,20 @@ const Footer = () => {
                     </div>
                     <div className="col-md-3 mb-2">
                         <h5>Contact Us</h5>
-                        <p className="small"><b>Hotline: </b> 1900.1900 - 1800.1900</p>
-                        <p className="small"><b>Email: </b> nextgenaideptraikhonghai@gmail.com</p>
-                        <h5>Office</h5>
-                        <p className="small">
-                            Ha Noi, Viet Nam Ha Noi, Viet NamHa Noi, Viet Nam Ha Noi, Viet Nam
-                            Ha Noi, Viet NamHa Noi, Viet NamHa Noi, Viet Nam Ha Noi, Viet NamHa
-                        </p>
+                        <p className="small"><b>Hotline: </b> 0964737054</p>
+                        <p className="small"><b>Email: </b> nextgenAI@gmail.com</p>
+                        <h5>Office:</h5>
+                        <span className="small">
+                            E3, 144 Xuan Thuy, Cau Giay, Ha Noi.
+                        </span>
                     </div>
                     <div className="col-md-3 mb-2" id="social_media">
                         <h5>Social Media</h5>
                         <div className="d-flex align-items-center">
-                            <a href="#" className="mr-2"><img width="20" height="20" src="https://img.icons8.com/fluency/240/twitter.png" alt="twitter" /></a>
-                            <a href="#" className="mr-2"><img width="20" height="20" src="https://img.icons8.com/color/144/facebook-new.png" alt="facebook" /></a>
-                            <a href="#" className="mr-2"><img width="20" height="20" src="https://img.icons8.com/fluency/240/instagram-new.png" alt="instagram" /></a>
-                            <a href="#"><img width="20" height="20" src="https://img.icons8.com/color/144/youtube-play.png" alt="youtube" /></a>
+                            <a href="#" className="mr-2"><img width="30" height="30" src="https://img.icons8.com/fluency/240/twitter.png" alt="twitter" /></a>
+                            <a href="#" className="mr-2"><img width="30" height="30" src="https://img.icons8.com/color/144/facebook-new.png" alt="facebook" /></a>
+                            <a href="#" className="mr-2"><img width="30" height="30" src="https://img.icons8.com/fluency/240/instagram-new.png" alt="instagram" /></a>
+                            <a href="#"><img width="30" height="30" src="https://img.icons8.com/color/144/youtube-play.png" alt="youtube" /></a>
                         </div>
                     </div>
                 </div>

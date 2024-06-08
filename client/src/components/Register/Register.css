@@ -169,9 +169,7 @@
   .Register-form {
     height: 1100px;
 
-    select {
-      display: block;
-    }
+    
 
     .error {
       display: block;
@@ -179,12 +177,17 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 545px) {
   .Register-form {
     height: 1200px;
 
+    select {
+      display: block;
+    }
+
     .select-role {
       height: 50px;
+      
     }
 
     .select-knowledge {

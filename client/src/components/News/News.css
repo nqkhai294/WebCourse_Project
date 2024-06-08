@@ -5,7 +5,13 @@
   
   .container {
     min-height: 700px;
+
+    .row {
+      padding-top: 25px;
+    }
   }
+
+  
 }
 
 .news-notice {
