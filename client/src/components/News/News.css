@@ -2,6 +2,16 @@
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
+  
+  .container {
+    min-height: 700px;
+
+    .row {
+      padding-top: 25px;
+    }
+  }
+
+  
 }
 
 .news-notice {

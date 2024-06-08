@@ -1,6 +1,6 @@
 .khung {
   align-items: center;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
@@ -127,8 +127,9 @@
 
 .error {
   color: rgb(255, 55, 55);
-  padding-left: 10px;
-  font-size: 14px;
+  padding-left: 160px;
+  font-size: 13px;
+  font-style: italic;
 }
 
 .submit-success {
@@ -165,19 +166,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  input[type="radio"] {
-    /* display: block; */
-  }
-
   .Register-form {
     height: 1100px;
 
-    .register-container {
-    }
-
-    select {
-      display: block;
-    }
+    
 
     .error {
       display: block;
@@ -185,16 +177,17 @@
   }
 }
 
-@media screen and (max-width: 550px) {
-  input[type="radio"] {
-    /* display: block; */
-  }
-
+@media screen and (max-width: 545px) {
   .Register-form {
     height: 1200px;
 
+    select {
+      display: block;
+    }
+
     .select-role {
       height: 50px;
+      
     }
 
     .select-knowledge {
@@ -203,6 +196,7 @@
 
     .error {
       display: block;
+      padding-left: 10px;
     }
   }
 }

@@ -5,15 +5,21 @@ import { imgUrl } from '../../constant/constants';
 const News = ({ news }) => {
     // Extract the data array from the news object
     const newsData = news.data || [];
+import { imgUrl } from '../../constant/constants';
+const News = ({ news }) => {
+    // Extract the data array from the news object
+    const newsData = news.data || [];
 
     return (
         <div className="news">
             <div className="container">
                 <div className="row">
                     {newsData.map((newsItem) => (
+                    {newsData.map((newsItem) => (
                         <div key={newsItem.id} className="col-lg-4 col-md-6 mb-4">
                             <Link to={`/news/${newsItem.id}`} className="text-decoration-none text-white">
                                 <div className="card bg-dark text-white shadow-sm">
+                                    <img className="card-img-top" src={`${imgUrl}${newsItem.attributes.coverImg.data.attributes.url}`} alt={`${imgUrl}${newsItem.attributes.coverImg.data.attributes.url}`} />
                                     <img className="card-img-top" src={`${imgUrl}${newsItem.attributes.coverImg.data.attributes.url}`} alt={`${imgUrl}${newsItem.attributes.coverImg.data.attributes.url}`} />
                                     <div className="card-body">
                                         <h5 className="card-title">{newsItem.attributes.newsTitle}</h5>
