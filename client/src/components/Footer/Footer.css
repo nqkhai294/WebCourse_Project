@@ -1,3 +1,12 @@
+.container {
+    padding-top: 35px;
+
+    .row {
+        padding-bottom: 20px;
+    }
+}
+
+
 footer h4,
 footer h5 {
     font-size: 16px;
@@ -12,27 +21,7 @@ footer p {
 footer ul {
     padding-left: 0;
     list-style: none;
-footer h4,
-footer h5 {
-    font-size: 16px;
-    margin-bottom: 8px;
 }
-
-footer p {
-    font-size: 12px;
-    margin-bottom: 8px; /* Thêm margin-bottom để tạo khoảng cách giữa các đoạn văn */
-}
-
-footer ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-footer li {
-    margin-bottom: 4px;
-}
-
-footer a {
 
 footer li {
     margin-bottom: 4px;
@@ -48,20 +37,9 @@ footer .btn {
 
 footer #social_media .d-flex a {
     display: inline-block;
-
-footer .btn {
-    padding: 5px;
-}
-
-footer #social_media .d-flex a {
-    display: inline-block;
 }
 
 footer .about-us {
     text-align: left;
     margin-left: 8px;
-footer .about-us {
-    text-align: left;
-    margin-left: 8px;
 }
-
