@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Register.css";
 import logo from "../../assets/Logo.png";
-
+import {apiUrl} from '../../constant/constants';
+import axios from "axios";
 
 const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
@@ -13,27 +14,19 @@ const Register = () => {
     email: "",
     phone: "",
     role: "Student",
-    knowleadge: "Uninformed",
+    level: "Uninformed",
     purpose: "",
   });
 
-  const url = "https://httpbin.org/post";
 
-  const fetchData = async (url, data) => {
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success: ", data);
-      })
-      .catch((error) => {
-        console.error("Error: ", error);
-      });
+  const fetchData = async (data) => {
+    try{
+      res = await axios.post(apiUrl + "/students",data);
+      console.log(res);
+    }
+    catch(err){
+      console.log(err);
+    }
   };
 
   const handleChange = (e) => {
@@ -60,22 +53,33 @@ const Register = () => {
       ((userDataForm.gender !== "") & (userDataForm.gender !== undefined)) &
       ((userDataForm.phone !== "") & (userDataForm.phone !== undefined)) &
       ((userDataForm.role !== "") & (userDataForm.role !== undefined)) &
-      ((userDataForm.knowleadge !== "") &
-        (userDataForm.knowleadge !== undefined)) &
+      ((userDataForm.level !== "") &
+        (userDataForm.level !== undefined)) &
       ((userDataForm.purpose !== "") & (userDataForm.purpose !== undefined))
     ) {
       setSubmitSuccess("true");
-      let data = {
+      const data = {
+        data: {
         username: userDataForm.username,
         birth: userDataForm.birth,
         email: userDataForm.email,
         gender: userDataForm.gender,
         phone: userDataForm.phone,
         role: userDataForm.role,
-        knowleadge: userDataForm.knowleadge,
+        level: userDataForm.level,
         purpose: userDataForm.purpose
+        // username :"Phamm dfsdfsSon",
+        // birth: "2004-11-15",
+        // gender: "male",
+        // email : "pdfddsfdfdssdfdson@gmail.com",
+        // phone : "0921411142",
+        // role: "Student",
+        // purpose :" biet nhieu hon nhung gi chua biet",
+        // level : "expert"
+         }
       };
-      fetchData(url, data);
+      fetchData(data);
+      console.log(data);
     }
 
     var error = document.getElementsByClassName("error");
@@ -146,13 +150,13 @@ const Register = () => {
       setSubmitSuccess("false");
     }
 
-    // Handle error for knowleadge
+    // Handle error for level
     if (
-      (userDataForm.knowleadge === "") |
-      (userDataForm.knowleadge === undefined)
+      (userDataForm.level === "") |
+      (userDataForm.level === undefined)
     ) {
-      let errorItem = document.getElementById("error_knowleadge");
-      errorItem.innerHTML = "Knowleadge is required.";
+      let errorItem = document.getElementById("error_level");
+      errorItem.innerHTML = "level is required.";
       setSubmitSuccess("false");
     }
 
@@ -188,6 +192,7 @@ const Register = () => {
                   type="text"
                   name="username"
                   placeholder="Your name"
+                  className="text-black"
                   onChange={(e) => handleChange(e)}
                   required
                 ></input>
@@ -200,6 +205,7 @@ const Register = () => {
                   type="date"
                   name="birth"
                   onChange={(e) => handleChange(e)}
+                  className="text-black"
                   required
                 ></input>
                 <div id="error_birth" className="error"></div>
@@ -208,33 +214,36 @@ const Register = () => {
               <div>
                 <label>Gender</label>
 
-                <label for="male" className="gender">
+                <label htmlfor="male" className="gender">
                   <input
                     type="radio"
                     name="gender"
                     value="male"
                     id="male"
                     onChange={(e) => handleChange(e)}
+                    className="text-black"
                     required
                   ></input>
                   Male
                 </label>
 
-                <label for="female" className="gender">
+                <label htmlFor="female" className="gender">
                   <input
                     type="radio"
                     name="gender"
                     value="female"
+                    className="text-black"
                     onChange={(e) => handleChange(e)}
                   ></input>
                   Female
                 </label>
 
-                <label for="other" className="gender">
+                <label htmlFor="other" className="gender">
                   <input
                     type="radio"
                     name="gender"
                     value="other"
+                    className="text-black"
                     onChange={(e) => handleChange(e)}
                   ></input>
                   Other
@@ -251,6 +260,7 @@ const Register = () => {
                   placeholder="Your email"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   required
+                  className="text-black"
                   onChange={(e) => handleChange(e)}
                 ></input>
                 <div id="error_email" className="error"></div>
@@ -262,6 +272,7 @@ const Register = () => {
                   type="text"
                   name="phone"
                   placeholder="Your phone number"
+                  className="text-black"
                   onChange={(e) => handleChange(e)}
                 ></input>
                 <div id="error_phone" className="error"></div>
@@ -272,7 +283,7 @@ const Register = () => {
                 <select
                   name="role"
                   onChange={(e) => handleChange(e)}
-                  className="role"
+                  className="role text-black"
                 >
                   <option>Student</option>
                   <option>Employee</option>
@@ -285,24 +296,24 @@ const Register = () => {
               <div className="select-knowledge">
                 <label>Knowledge about AI </label>
                 <select
-                  name="knowleadge"
+                  name="level"
                   onChange={(e) => handleChange(e)}
-                  className="knowleadge"
+                  className="level text-black"
                 >
-                  <option>Uninformed</option>
-                  <option>Basic understanding</option>
-                  <option>Knowledgeable</option>
-                  <option>Expert</option>
+                  <option>uninformed</option>
+                  <option>basic understanding</option>
+                  <option>knowledgeable</option>
+                  <option>expert</option>
                 </select>
 
-                <div id="error_knowleadge" className="error"></div>
+                <div id="error_level" className="error"></div>
               </div>
 
               <div>
                 <label>Your goals</label>
                 <input
                   type="text"
-                  className="purpose"
+                  className="purpose, text-black"
                   name="purpose"
                   onChange={(e) => handleChange(e)}
                 ></input>

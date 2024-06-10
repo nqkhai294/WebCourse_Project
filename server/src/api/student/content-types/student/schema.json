@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "username": {
       "type": "string",
       "required": true
     },
@@ -42,9 +42,9 @@
     "role": {
       "type": "enumeration",
       "enum": [
-        "student",
-        "employee",
-        "other"
+        "Student",
+        "Employee",
+        "Other"
       ],
       "required": true
     },

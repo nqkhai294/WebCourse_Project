@@ -5,10 +5,8 @@ import axios from 'axios';
 const axiosInstance = axios.create({
     baseURL: apiUrl,
     headers: {
+      'Content-Type': 'application/json', 
       'Access-Control-Allow-Origin': '*' ,
-      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-      "preflightContinue": "false",
-      'Content-Type': 'application/json',
     }
   });
 export default axiosInstance; 

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "register_dates",
+  "info": {
+    "singularName": "register-date",
+    "pluralName": "register-dates",
+    "displayName": "registerDate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "open": {
+      "type": "datetime"
+    },
+    "close": {
+      "type": "datetime"
+    }
+  }
+}
