@@ -7,6 +7,7 @@
 }
 
 .Register-form {
+  padding-top:70px;
   display: flex;
   height: 900px;
   justify-content: center;
@@ -102,6 +103,14 @@
       border: 1px solid black;
     }
   }
+
+  .gender-selection {
+    display: inline-block;
+  }
+
+  .goals {
+    padding-bottom: 40px;
+  }
 }
 
 .submit-form {
@@ -130,6 +139,11 @@
   padding-left: 160px;
   font-size: 13px;
   font-style: italic;
+}
+
+.error#error_captcha {
+  padding-left: 0px;
+
 }
 
 .submit-success {
@@ -169,15 +183,17 @@
   .Register-form {
     height: 1100px;
 
-    
-
     .error {
       display: block;
+    }
+
+    .gender-selection {
+      display: inline-block;
     }
   }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 550px) {
   .Register-form {
     height: 1200px;
 
@@ -185,9 +201,12 @@
       display: block;
     }
 
+    .gender-selection {
+      display: block;
+    }
+
     .select-role {
       height: 50px;
-      
     }
 
     .select-knowledge {

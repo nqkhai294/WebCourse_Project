@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Register.css";
 import logo from "../../assets/Logo.png";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
@@ -16,6 +16,13 @@ const Register = () => {
     knowleadge: "Uninformed",
     purpose: "",
   });
+
+  const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleCaptcha = () => {
+    setCaptchaValue("target.value");
+    console.log(captchaValue);
+  };
 
   const url = "https://httpbin.org/post";
 
@@ -73,7 +80,7 @@ const Register = () => {
         phone: userDataForm.phone,
         role: userDataForm.role,
         knowleadge: userDataForm.knowleadge,
-        purpose: userDataForm.purpose
+        purpose: userDataForm.purpose,
       };
       fetchData(url, data);
     }
@@ -100,7 +107,7 @@ const Register = () => {
     if (!emailPattern.test(emailInput)) {
       let errorItem = document.getElementById("error_email");
       errorItem.innerHTML = "Email is not in the correct format.";
-      setSubmitSuccess("false")
+      setSubmitSuccess("false");
     }
 
     if ((userDataForm.email === "") | (userDataForm.email === undefined)) {
@@ -130,7 +137,7 @@ const Register = () => {
     if (!phonePattern.test(phoneInput)) {
       let errorItem = document.getElementById("error_phone");
       errorItem.innerHTML = "Phone number is not in the correct format.";
-      setSubmitSuccess("false")
+      setSubmitSuccess("false");
     }
 
     if ((userDataForm.phone === "") | (userDataForm.phone === undefined)) {
@@ -162,6 +169,17 @@ const Register = () => {
       errorItem.innerHTML = "Purpose is required.";
       setSubmitSuccess("false");
     }
+
+    //Handle error for captcha
+
+    const captchaResponse = grecaptcha.getResponse();
+    
+    if (!captchaResponse.length > 0) {
+      let errorItem = document.getElementById("error_captcha");
+      errorItem.innerHTML = "Captcha is required.";
+      setSubmitSuccess("false");
+    }
+
 
     // console.log(submitSuccess)
   };
@@ -208,37 +226,39 @@ const Register = () => {
               <div>
                 <label>Gender</label>
 
-                <label for="male" className="gender">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                    id="male"
-                    onChange={(e) => handleChange(e)}
-                    required
-                  ></input>
-                  Male
-                </label>
+                <div className="gender-selection">
+                  <label for="male" className="gender">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      id="male"
+                      onChange={(e) => handleChange(e)}
+                      required
+                    ></input>
+                    Male
+                  </label>
 
-                <label for="female" className="gender">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    onChange={(e) => handleChange(e)}
-                  ></input>
-                  Female
-                </label>
+                  <label for="female" className="gender">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      onChange={(e) => handleChange(e)}
+                    ></input>
+                    Female
+                  </label>
 
-                <label for="other" className="gender">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="other"
-                    onChange={(e) => handleChange(e)}
-                  ></input>
-                  Other
-                </label>
+                  <label for="other" className="gender">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="other"
+                      onChange={(e) => handleChange(e)}
+                    ></input>
+                    Other
+                  </label>
+                </div>
 
                 <div id="error_gender" className="error"></div>
               </div>
@@ -298,7 +318,7 @@ const Register = () => {
                 <div id="error_knowleadge" className="error"></div>
               </div>
 
-              <div>
+              <div className="goals">
                 <label>Your goals</label>
                 <input
                   type="text"
@@ -308,6 +328,16 @@ const Register = () => {
                 ></input>
 
                 <div id="error_purpose" className="error"></div>
+              </div>
+
+              <div >
+                <ReCAPTCHA
+                  sitekey="6LdJcPYpAAAAAPw8u3S2Paua_Df2v49sq2q3QWO2"
+                  onChange={handleCaptcha}
+                  className="authentication"
+                />
+
+                <div id="error_captcha" className="error"></div>
               </div>
 
               <div className="submit-form">
