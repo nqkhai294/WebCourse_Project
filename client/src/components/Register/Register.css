@@ -7,9 +7,9 @@
 }
 
 .Register-form {
-  padding-top:70px;
+  padding-top: 70px;
   display: flex;
-  height: 900px;
+
   padding-bottom: 80px;
   justify-content: center;
   align-items: center;
@@ -108,7 +108,7 @@
   }
 
   .gender-selection {
-    display: inline-block;
+    display: inline;
   }
 
   .goals {
@@ -179,9 +179,7 @@
 
 @media screen and (max-width: 600px) {
   .Register-form {
-    height: 1100px;
-
-    
+    padding-right: 5px;
 
     .error {
       display: block;
@@ -189,17 +187,18 @@
   }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 547px) {
   .Register-form {
-    height: 1200px;
-
     select {
+      display: block;
+    }
+
+    content {
       display: block;
     }
 
     .select-role {
       height: 50px;
-      
     }
 
     .select-knowledge {

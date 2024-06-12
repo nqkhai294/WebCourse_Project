@@ -260,7 +260,7 @@ const Register = () => {
               <div className="gender-selection">
                 <label>Gender</label>
 
-                <div>
+                <content>
                 <label htmlfor="male" className="gender">
                   <input
                     type="radio"
@@ -295,7 +295,7 @@ const Register = () => {
                   ></input>
                   Other
                 </label>
-                </div>
+                </content>
 
                 <div id="error_gender" className="error"></div>
               </div>
