@@ -5,13 +5,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from "react-router-dom";
 import './Header.css'
 import { useState, useEffect } from 'react';
+import LogoCourse from '../../assets/LogoCourse.png';
 
 const Header = () => {
 
   return (
     <div className='nav-header'>
     <Navbar expand='lg' bg='header'>
-    <Navbar.Brand href="/" className='logo-course'>NextGenAI</Navbar.Brand>
+    <Navbar.Brand href="/" className='logo-course'><img className='img-logo' src={LogoCourse} alt="logo" /> NextGenAI </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navigation">

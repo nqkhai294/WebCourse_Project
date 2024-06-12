@@ -11,8 +11,9 @@
   }
 
   .logo-course {
+    display: inline-flex;
     margin-left: 60px;
-    margin-right: 100px;
+    width:200px;
     font-weight: 800;
     font-size: 30px !important;
     font-family: math;
@@ -20,6 +21,8 @@
     &:hover {
       color: white !important;
     }
+
+    
   }
 
   .navigation-home, .navigation-about, .navigation-news, .navigation-register{
@@ -46,5 +49,11 @@
   .navbar-toggler-icon {
       background-image: url(../../assets/menu_icon.jpg);
       
+  }
+
+  .img-logo {
+    width: 40px;
+    height: 40px;
+    
   }
 }
