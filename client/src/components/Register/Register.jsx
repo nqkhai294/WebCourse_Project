@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Register = (date) => {
+const Register = ({date}) => {
   console.log(date);
   const now = new Date();
   const openDate = new Date(date.date.data.attributes.open);

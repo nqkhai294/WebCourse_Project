@@ -1,5 +1,5 @@
 import { DateTimePicker } from '@strapi/design-system/DateTimePicker';
-import { Button } from '@strapi/design-system';
+import { Button, Box, Alert } from '@strapi/design-system';
 import React, { useEffect, useState } from 'react';
 import './index.css';
 import pluginId from '../../pluginId';
@@ -11,11 +11,12 @@ const HomePage = () => {
   const url2 = apiUrl + '/api/register-dates/1';
   const headers = {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer 2b443c06de466dd1c755f88935275028dea58b56ffaecf0655fe46cb6a0f941f3088044a333a9054f90d9815b3f09ff83c082f3a2a4460fa67cc8968ce0e413eea5d8010a629e00c7baacb92cc56632e5cdfc9ecd98425cb678f5a16576f84fe6b7bdd4e168efe8fcfb1a40ca45bbfa9aa39dd52cfe2bb225509c51bb5ad3d9c`
+    'Authorization': `Bearer e2a41cdacd1c813ab20bac113275c1258145dbd9498936cfabf10d28460d7c2db6ad3fc3b4734bbed031d4ba26eed2f5a004ee0d3ebb919f403719cd10353d3da5756f1967aa542eea5f94128d899fff7d84c5e5e5df968e6ef08081d547c6d7e774649760c7933f352bdce2901d4e6633ae9682462e3de86dc6696d80483925`
   };
 
   const [date1, setValue] = useState();
   const [date2, setValue2] = useState();
+  const [success, setSuccess] = useState(false);
 
   console.log('HomePage');
   useEffect(() => {
@@ -57,6 +58,7 @@ const HomePage = () => {
       const data = await response.json();
       console.log(data);
       console.log(response);
+      setSuccess(true);
     } catch (e) {
       console.error(e);
     }
@@ -104,21 +106,28 @@ const HomePage = () => {
   return (
     <div className='container mt-4'>
       <div className='form-group'>
-      <DateTimePicker label="Open at" locale="en-GB" value={date1} onChange={setValue} onClear={() => setValue(undefined)} />
+        <DateTimePicker label="Open at" locale="en-GB" value={date1} onChange={setValue} onClear={() => setValue(undefined)} />
       </div>
       <div className='form-group'>
-      <DateTimePicker label="Close at" locale="en-GB" value={date2} onChange={setValue2} onClear={() => setValue2(undefined)} />
+        <DateTimePicker label="Close at" locale="en-GB" value={date2} onChange={setValue2} onClear={() => setValue2(undefined)} />
       </div>
       <div>
-        <Button className='btn btn-primary'
-          onClick={(e) => handleSubmmit(e)}
-        >Submit register date</Button>
+        <Button className='btn btn-primary' onClick={(e) => handleSubmmit(e)}>
+          Submit register date
+        </Button>
       </div>
       <div>
-        <Button className='btn btn-primary'
-          onClick={(e) => handleExport(e)}
-        >Export students data to file</Button>
+        <Button className='btn btn-primary' onClick={(e) => handleExport(e)}>
+          Export students data to file
+        </Button>
       </div>
+      {success && (
+        <Box style={{ width: 700, marginTop: 20 }}>
+          <Alert closeLabel="Close" title="Title" variant="success" onClose={() => setSuccess(false)}>
+            Register dates updated successfully!
+          </Alert>
+        </Box>
+      )}
     </div>
   );
 };
