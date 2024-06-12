@@ -25,3 +25,13 @@ Content-Type: application/json
 
 GET http://http://localhost:1337/uploads/base64_17176017849621032715406_cb93023d9f.jpeg
 Content-Type: application/json
+
+###
+
+GET http://localhost:1337/api/students
+Content-Type: application/json
+Authorization: Bearer 2b443c06de466dd1c755f88935275028dea58b56ffaecf0655fe46cb6a0f941f3088044a333a9054f90d9815b3f09ff83c082f3a2a4460fa67cc8968ce0e413eea5d8010a629e00c7baacb92cc56632e5cdfc9ecd98425cb678f5a16576f84fe6b7bdd4e168efe8fcfb1a40ca45bbfa9aa39dd52cfe2bb225509c51bb5ad3d9c
+
+###
+GET http://localhost:1337/api/register-dates/1
+Content-Type: application/json

@@ -6,7 +6,25 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Register = () => {
+const Register = (date) => {
+  console.log(date);
+  const now = new Date();
+  const openDate = new Date(date.date.data.attributes.open);
+  const closeDate = new Date(date.date.data.attributes.close);
+  if(now < openDate || now > closeDate){
+    return (
+      <div className="khung">
+      <div className="submit-success">
+        <div className="submit-success-notify">
+          <div className="notification"> Registration is closed.</div>
+          <div className="home_back">
+            <a href="/">&#60;&#60; Go to Homepage</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    );
+  }
   const [submitSuccess, setSubmitSuccess] = useState("false");
 
   const [userDataForm, setUserDataForm] = useState({

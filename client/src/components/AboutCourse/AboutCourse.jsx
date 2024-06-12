@@ -1,10 +1,32 @@
 import "./AboutCourse.css";
 
-const AboutCourse = (props) => {
+const AboutCourse = ({ date }) => {
+  console.log(date);
+  console.log(date.data.attributes.open);
+
+  const openDate = new Date(date.data.attributes.open);
+  const closeDate = new Date(date.data.attributes.close);
+
+  // Định dạng ngày tháng thành chuỗi mong muốn
+  const formatDate = (date) => {
+    return date.toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    });
+  };
+
+  const formattedOpenDate = formatDate(openDate);
+  const formattedCloseDate = formatDate(closeDate);
+
   return (
     <div className="about-course">
-      <div class="overall-introduction">
-        <div class="sub-title">/ About course</div>
+      <div className="overall-introduction">
+        <div className="sub-title">/ About course</div>
 
         <h1>Inspiring the Future Innovators of AI</h1>
 
@@ -21,9 +43,17 @@ const AboutCourse = (props) => {
       </div>
 
       <div className="ab-information">
-        <div class="sub-title">/ Information</div>
+        <div className="sub-title">/ Information</div>
         <div className="ab-header">
           <h2>Artificial Intelligence (AI) Course</h2>
+        </div>
+        
+        <div className="ab-content">
+          <h4>Registration Time:</h4>
+          <ul>
+            <li>Open: {formattedOpenDate}</li>
+            <li>Close: {formattedCloseDate}</li>
+          </ul>
         </div>
 
         <div className="ab-content">

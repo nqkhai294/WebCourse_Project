@@ -9,10 +9,11 @@ import useFetchData from '../hook/useFetchData';
 const Routers = () => {
 
     const { data, loading, error } = useFetchData('/news?populate=%2A');
-    if (loading) {
+    const { data: data2, loading: loading2, error: error2 } = useFetchData('/register-dates/1');
+    if (loading||loading2) {
         return <div>Loading...</div>;
     }
-    if (error) {
+    if (error||error2) {
         return <div>Error: {error.message}</div>;
     }
     console.log(data);
@@ -21,10 +22,11 @@ const Routers = () => {
         <Routes>
             <Route index element={<HomePage />} />
             <Route path="/" element={<HomePage />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/aboutcourse" element={<AboutCourse date={data2?data2:""}/>} />
+            <Route path="/register" element={<Register date={data2?data2:""} />} />
             <Route path="/news" element={<News news={data?data:""} />} />
             <Route path="/news/:id" element={<NewContent news={data?data:""}/>} />
-            <Route path="/aboutcourse" element={<AboutCourse />} />
+            
         </Routes>
     )
 }
