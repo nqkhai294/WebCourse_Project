@@ -10,15 +10,14 @@ Content-Type: application/json
 
 {
     "data": {
-        "name" :"Phammmm Son",
+        "username" :"Phammmm Son",
         "birth": "2004-11-15",
         "gender": "male",
-        "email" : "phamson@gmail",
+        "email" : "pdfdson@gmail.com",
         "phone" : "092141411111",
-        "role": "student",
+        "role": "Student",
         "purpose" :" biet nhieu hon nhung gi chua biet",
         "level" : "expert"
-
     }
 }
 

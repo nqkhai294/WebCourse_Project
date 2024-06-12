@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Register.css";
 import logo from "../../assets/Logo.png";
 import {apiUrl} from '../../constant/constants';
+import { toast } from "react-toastify";
 import axios from "axios";
 
 const Register = () => {
@@ -14,18 +15,48 @@ const Register = () => {
     email: "",
     phone: "",
     role: "Student",
-    level: "Uninformed",
+    level: "uninformed",
     purpose: "",
   });
 
 
   const fetchData = async (data) => {
     try{
-      res = await axios.post(apiUrl + "/students",data);
+      const res = await axios.post(apiUrl + "/students",data);
       console.log(res);
+      if(res.status === 200)
+        {
+          setSubmitSuccess("true");
+          toast.success("Register successfully");
+        }
     }
     catch(err){
       console.log(err);
+      toast.error("Register failed");
+      const error = err.response.data.error.details.errors[0];
+      if(error.path[0] === "email"){
+        if(error.message === "This attribute must be unique")
+        toast.error("Email is already in use");
+        else
+        toast.error("Email is not in the correct format");
+      }
+      else if(error.path[0] === "phone"){
+        if(error.message === "This attribute must be unique")
+        toast.error("Phone number is already in use");
+        else
+        toast.error("Phone number is not in the correct format");
+      }
+      else if(error.path[0] === "username"){
+        if(error.message === "This attribute must be unique")
+          toast.error("Username is already in use");
+        else
+          toast.error("Username is required");
+      }
+      else if(error.path[0] === "birth"){
+        toast.error("Birth is required");
+      }
+      else 
+        toast.error("Server error");
     }
   };
 
@@ -57,7 +88,6 @@ const Register = () => {
         (userDataForm.level !== undefined)) &
       ((userDataForm.purpose !== "") & (userDataForm.purpose !== undefined))
     ) {
-      setSubmitSuccess("true");
       const data = {
         data: {
         username: userDataForm.username,
