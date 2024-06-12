@@ -2,7 +2,7 @@
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(92.66deg, #7e1292 2.16%, #2a49c0 168.56%);
-  
+
   .container {
     min-height: 700px;
 
@@ -10,8 +10,10 @@
       padding-top: 25px;
     }
   }
+}
 
-  
+.row {
+  padding-top: 70px !important;
 }
 
 .news-notice {
@@ -34,14 +36,17 @@
 
 .card {
   background-color: #1a1a1a; /* Dark background color */
+  height: 100% !important; /* Fill the height of the parent container */
 }
 
 .card .card-title {
   color: #ffffff; /* White text for titles */
+  padding: 10px 10px;
 }
 
 .card .card-text {
   color: #cccccc; /* Light grey text for descriptions */
+  padding: 10px 10px;
 }
 
 .card img {
@@ -54,3 +59,76 @@
   margin: 0 auto; /* Center the image */
   display: block;
 }
+
+.card-img-top {
+  width: auto;
+  height: 250px; /* Adjust this value as needed */
+  object-fit: cover; /* Maintain aspect ratio */
+
+}
+
+
+/* Css for NewsContent*/
+.display-4 {
+  font-weight: 600 !important;
+  font-size: 3rem !important;
+}
+
+.title-newscontent {
+  padding-bottom: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.img-newscontent {
+  
+  width: 80% !important;
+}
+
+.btn-back {
+  font-size: 20px;
+  width: 70px;
+  color:white;
+  padding-bottom: 20px;
+
+  .btn {
+    width: 90px;
+  }
+}
+
+.content-newscontent {
+  padding: 0px 5vw;
+}
+
+@media screen and (max-width: 900px) {
+  .display-4 {
+    font-weight: 600 !important;
+    font-size: 40px !important;
+  }
+
+  .img-newscontent {
+    height: 100% !important;
+    width: 90% !important;
+  }
+
+  .content-newscontent {
+    padding: 0px 0vw;
+  }
+  
+}
+
+@media screen and (max-width: 600px){
+  .display-4 {
+    font-weight: 600 !important;
+    font-size: 30px !important;
+  }
+
+  .img-newscontent {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .p-4 {
+    padding: 0px !important;
+  }
+}
+

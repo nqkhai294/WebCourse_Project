@@ -8,8 +8,7 @@ const Footer = () => {
                     <div className="sb_footer-links-div">
                         <h4>About Us</h4>
                         <p>
-                    I need more context to answer your question accurately. Please provide more information about what you mean by "doan van gi do". Are you asking about a specific phrase or concept in Vietnamese?
-                    I need more context to answer your question accurately. Please provide more information about what you mean by "doan van gi do". Are you asking about a specific phrase or concept in Vietnamese?
+                        University of Engineering and Technology, Vietnam National University, Hanoi.
                     </p>
                     </div>
                     <div className="sb_footer-links-div">
@@ -23,18 +22,19 @@ const Footer = () => {
                     <div className="sb_footer-links-div">
                         <h4>Contact Us</h4>
                         <p><b>Hotline: </b> 1900.1900  -  1800.1900</p>
-                        <p><b>Email: </b>nextgenaideptraikhonghai@gmail.com</p>
+                        <p><b>Email: </b>nextgenAI@gmail.com</p>
                         <h4>Office</h4>
-                        <p>Ha Noi,Viet Nam Ha Noi,Viet NamHa Noi,Viet NamHa Noi,Viet Nam
-                        Ha Noi,Viet NamHa Noi,Viet NamHa Noi,Viet Nam Ha Noi,Viet NamHa
+                        <p>E3, 144 Xuan Thuy, Cau Giay, Ha Noi.
                         </p>
                     </div>
                     <div className="sb_footer-links-div" id="social_media">
                         <h4>Social Media  </h4>
-                        <img width="40" height="40" src="https://img.icons8.com/fluency/240/twitter.png" alt="facebook-new"/>
-                        <img width="40" height="40"  src="https://img.icons8.com/color/144/facebook-new.png" alt="instagram-new--v1"/>
-                        <img width="40" height="40"  src="https://img.icons8.com/fluency/240/instagram-new.png" alt="twitter--v1"/>
-                        <img width="40" height="40"  src="https://img.icons8.com/color/144/youtube-play.png"/>
+                        <div className="d-flex align-items-center">
+                            <a href="#" className="mr-2"><img width="30" height="30" src="https://img.icons8.com/fluency/240/twitter.png" alt="twitter" /></a>
+                            <a href="#" className="mr-2"><img width="30" height="30" src="https://img.icons8.com/color/144/facebook-new.png" alt="facebook" /></a>
+                            <a href="#" className="mr-2"><img width="30" height="30" src="https://img.icons8.com/fluency/240/instagram-new.png" alt="instagram" /></a>
+                            <a href="#"><img width="30" height="30" src="https://img.icons8.com/color/144/youtube-play.png" alt="youtube" /></a>
+                        </div>
 
                     </div>
                 </div>

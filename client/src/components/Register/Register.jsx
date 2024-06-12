@@ -93,7 +93,8 @@ const Register = () => {
       ((userDataForm.role !== "") & (userDataForm.role !== undefined)) &
       ((userDataForm.level !== "") &
         (userDataForm.level !== undefined)) &
-      ((userDataForm.purpose !== "") & (userDataForm.purpose !== undefined))
+      ((userDataForm.purpose !== "") & (userDataForm.purpose !== undefined)) &
+      (grecaptcha.getResponse().length > 0)
     ) {
       const data = {
         data: {
@@ -256,9 +257,10 @@ const Register = () => {
                 <div id="error_birth" className="error"></div>
               </div>
 
-              <div>
+              <div className="gender-selection">
                 <label>Gender</label>
 
+                <div>
                 <label htmlfor="male" className="gender">
                   <input
                     type="radio"
@@ -293,6 +295,7 @@ const Register = () => {
                   ></input>
                   Other
                 </label>
+                </div>
 
                 <div id="error_gender" className="error"></div>
               </div>
@@ -345,16 +348,16 @@ const Register = () => {
                   onChange={(e) => handleChange(e)}
                   className="level text-black"
                 >
-                  <option>uninformed</option>
-                  <option>basic understanding</option>
-                  <option>knowledgeable</option>
-                  <option>expert</option>
+                  <option>Uninformed</option>
+                  <option>Basic understanding</option>
+                  <option>Knowledgeable</option>
+                  <option>Expert</option>
                 </select>
 
                 <div id="error_level" className="error"></div>
               </div>
 
-              <div>
+              <div className="goals">
                 <label>Your goals</label>
                 <input
                   type="text"
@@ -368,7 +371,7 @@ const Register = () => {
 
               <div >
                 <ReCAPTCHA
-                  sitekey="6LdJcPYpAAAAAPw8u3S2Paua_Df2v49sq2q3QWO2"
+                  sitekey="6LcE2fYpAAAAAHPVQ1Am21vm32BxOwVap36PJ-Y3"
                   onChange={handleCaptcha}
                   className="authentication"
                 />

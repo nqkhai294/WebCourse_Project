@@ -39,12 +39,12 @@
     background-color: #222222;
     border: 2px solid white;
     position: absolute;
-    right: 17px;
+    right: 25px;
     top: 16px;
   }
 
   .navbar-toggler-icon {
-      background-image: url(D:\Workspace\BTL_Web\client\src\assets\menu_icon.jpg);
+      background-image: url(../../assets/menu_icon.jpg);
       
   }
 }
