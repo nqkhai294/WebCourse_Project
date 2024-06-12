@@ -10,6 +10,7 @@ const Routers = () => {
 
     const { data, loading, error } = useFetchData('/news?populate=%2A');
     const { data: data2, loading: loading2, error: error2 } = useFetchData('/register-dates/1');
+    console.log(data2);
     if (loading||loading2) {
         return <div>Loading...</div>;
     }

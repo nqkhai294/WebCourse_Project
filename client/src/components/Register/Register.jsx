@@ -9,8 +9,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 const Register = ({date}) => {
   console.log(date);
   const now = new Date();
-  const openDate = new Date(date.date.data.attributes.open);
-  const closeDate = new Date(date.date.data.attributes.close);
+  const openDate = new Date(date.data.attributes.open);
+  const closeDate = new Date(date.data.attributes.close);
   if(now < openDate || now > closeDate){
     return (
       <div className="khung">
