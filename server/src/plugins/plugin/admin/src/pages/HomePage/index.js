@@ -10,19 +10,19 @@ import './index.css';
 import pluginId from '../../pluginId';
 
 const HomePage = () => {
-  console.log('HomePage');
-  const [dataForm, setdataForm] = useState({
-    openAt: new Date('1994-12-18T15:00:00.000Z'),
-    closeAt: new Date('1994-12-18T15:00:00.000Z'),
-  });
+  // console.log('HomePage');
+  // const [dataForm, setdataForm] = useState({
+  //   openAt: new Date('1994-12-18T15:00:00.000Z'),
+  //   closeAt: new Date('1994-12-18T15:00:00.000Z'),
+  // });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setdataForm({
-      ...dataForm,
-      [name]: value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setdataForm({
+  //     ...dataForm,
+  //     [name]: value,
+  //   });
+  // };
   
   return (
     <div className='container mt-4'>
@@ -32,7 +32,7 @@ const HomePage = () => {
           name = "openAt"
           initialDate={new Date('1994-12-18T15:00:00.000Z')}
           className="form-control custom-label"
-          onChange={(e) => handleChange(e)}
+          //onChange={(e) => handleChange(e)}
         />
       </div>
       <div className='form-group'>
@@ -41,10 +41,9 @@ const HomePage = () => {
           name = "closeAt"
           initialDate={new Date('1994-12-18T15:00:00.000Z')}
           className="form-control custom-label"
-          onChange={(e) => handleChange(e)}
+          //onChange={(e) => handleChange(e)}
         />
       </div>
-      <Button variant="default">Export data to file</Button>
     </div>
   );
 };

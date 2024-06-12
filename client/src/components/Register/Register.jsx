@@ -4,6 +4,7 @@ import logo from "../../assets/Logo.png";
 import {apiUrl} from '../../constant/constants';
 import { toast } from "react-toastify";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Register = () => {
   const [submitSuccess, setSubmitSuccess] = useState("false");
@@ -19,6 +20,12 @@ const Register = () => {
     purpose: "",
   });
 
+  const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleCaptcha = () => {
+    setCaptchaValue("target.value");
+    console.log(captchaValue);
+  };
 
   const fetchData = async (data) => {
     try{
@@ -179,7 +186,6 @@ const Register = () => {
       errorItem.innerHTML = "Role is required.";
       setSubmitSuccess("false");
     }
-
     // Handle error for level
     if (
       (userDataForm.level === "") |
@@ -197,6 +203,15 @@ const Register = () => {
       setSubmitSuccess("false");
     }
 
+    //Handle error for captcha
+
+    const captchaResponse = grecaptcha.getResponse();
+    
+    if (!captchaResponse.length > 0) {
+      let errorItem = document.getElementById("error_captcha");
+      errorItem.innerHTML = "Captcha is required.";
+      setSubmitSuccess("false");
+    }
     // console.log(submitSuccess)
   };
 
@@ -351,6 +366,15 @@ const Register = () => {
                 <div id="error_purpose" className="error"></div>
               </div>
 
+              <div >
+                <ReCAPTCHA
+                  sitekey="6LdJcPYpAAAAAPw8u3S2Paua_Df2v49sq2q3QWO2"
+                  onChange={handleCaptcha}
+                  className="authentication"
+                />
+
+                <div id="error_captcha" className="error"></div>
+              </div>
               <div className="submit-form">
                 <button
                   className="form-submit-btn"
