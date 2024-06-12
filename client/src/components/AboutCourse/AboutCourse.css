@@ -49,6 +49,7 @@
     color: #ffffff;
     padding: 75px 12vw;
     padding-bottom: 120px;
+    
 
     .sub-title {
       color: #ffffff;
@@ -64,6 +65,11 @@
 
     .ab-header {
       padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .ab-content, .ab-schedule, .ab-requirements {
+      padding-bottom: 20px;
     }
   }
 }

@@ -6,14 +6,13 @@
   .container {
     min-height: 700px;
 
-    .row {
-      padding-top: 25px;
-    }
+    
   }
 }
 
 .row {
   padding-top: 70px !important;
+  padding-bottom: 50px;
 }
 
 .news-notice {
@@ -34,9 +33,16 @@
   color: #ffffff;
 }
 
+.col-md-6{
+  padding-bottom: 15px;
+}
+
 .card {
   background-color: #1a1a1a; /* Dark background color */
   height: 100% !important; /* Fill the height of the parent container */
+  margin-top: 10px;
+  border: 1px solid grey!important;
+
 }
 
 .card .card-title {

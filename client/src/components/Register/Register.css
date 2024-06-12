@@ -144,6 +144,10 @@
   font-style: italic;
 }
 
+#error_captcha {
+  padding: 0px !important;
+}
+
 .submit-success {
   height: 100vh;
   padding-top: 70px;

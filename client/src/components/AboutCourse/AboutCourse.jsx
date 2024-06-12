@@ -40,8 +40,10 @@ const AboutCourse = (props) => {
 
         <div className="ab-schedule">
           <h4>Course Duration:</h4>
-          <p>Duration: 2 months</p>
-          <p>Schedule: Monday, Wednesday, Friday from 7:30 AM to 10:30 AM</p>
+          <ul>
+          <li>Duration: 2 months</li>
+          <li>Schedule: Monday, Wednesday, Friday from 7:30 AM to 10:30 AM</li>
+          </ul>
         </div>
 
         <div className="ab-requirements">
