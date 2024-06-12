@@ -14,11 +14,11 @@ const Footer = () => {
           </div>
           <div className="sb_footer-links-div">
             <h4>Developer</h4>
-            <div>
+            <>
               Ha Tien Dong <br />
               Pham Quy Son <br />
               Nguyen Quang Khai
-            </div>
+            </>
           </div>
           <div className="sb_footer-links-div">
             <h4>Contact Us</h4>

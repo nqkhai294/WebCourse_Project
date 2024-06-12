@@ -15,13 +15,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
+  padding-top:1rem;
   padding-left: 10rem;
   padding-bottom: 1rem;
   padding-right: 10rem;
 }
 
 .sb_footer-links-div {
-  width: 300px;
+  width: 24%;
   margin-left: 1px;
   margin-right: 1px;
   margin-top: 1rem;
@@ -31,21 +32,19 @@
   flex-direction: column;
   color: white;
 }
-.sb_footer-links-div .about_Us {
-  width: 400px;
-}
+
 
 a {
   color: rgb(175, 175, 179);
   text-decoration: none;
 }
 .sb_footer-links-div h4 {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 17px;
   margin-bottom: 0.9rem;
 }
 .sb_footer-links-div p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 20px;
   margin: 0, 5rem 0;
   cursor: pointer;
@@ -62,11 +61,11 @@ hr {
   color: white !important;
   width: 100%;
 }
-.sb_footer-copyright {
-  font-size: 20px;
+.sb__footer-copyright {
+  font-size: 17px;
   line-height: 15px;
   color: rgb(255, 255, 255);
-  font-weight: 600;
+  
 }
 
 
@@ -75,7 +74,7 @@ hr {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .sb_footer-heading h1 {
       font: size 44px;
       line-height: 50px;
@@ -86,7 +85,7 @@ hr {
   }
 
   .sb_footer-links-div {
-      width: 400px;
+      width: 100% !important;
       margin-left: 10rem;
   }
   .sb_footer-below {
