@@ -5,7 +5,7 @@ import News from '../components/News/News.jsx';
 import AboutCourse from '../components/AboutCourse/AboutCourse.jsx';
 import NewContent from '../components/News/NewContent.jsx';
 import useFetchData from '../hook/useFetchData';
-import Admin from '../components/Admin/Admin.jsx';
+import Admin from '../components/AdminPage/Admin.jsx';
 
 const Routers = () => {
 
