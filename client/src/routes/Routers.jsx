@@ -5,6 +5,7 @@ import News from '../components/News/News.jsx';
 import AboutCourse from '../components/AboutCourse/AboutCourse.jsx';
 import NewContent from '../components/News/NewContent.jsx';
 import useFetchData from '../hook/useFetchData';
+import Admin from '../components/Admin/Admin.jsx';
 
 const Routers = () => {
 
@@ -27,6 +28,7 @@ const Routers = () => {
             <Route path="/register" element={<Register date={data2?data2:""} />} />
             <Route path="/news" element={<News news={data?data:""} />} />
             <Route path="/news/:id" element={<NewContent news={data?data:""}/>} />
+            <Route path="/admin" element={<Admin />} />
             
         </Routes>
     )
